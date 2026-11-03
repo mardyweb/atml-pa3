@@ -1,0 +1,54 @@
+{
+  "method": "full",
+  "config": {
+    "kind": "full",
+    "lr": 2e-05,
+    "lam": 0.0,
+    "r": null,
+    "alpha": null,
+    "k": null
+  },
+  "seed": 6304,
+  "trainable_params": 596049920,
+  "total_params": 596049920,
+  "adapter_params": 0,
+  "train_seconds": 5724.255707569,
+  "resumed_from_update": 0,
+  "peak_mem_allocated_bytes": 20979184640,
+  "peak_mem_reserved_bytes": 40351301632,
+  "skipped_updates": [],
+  "checkpoints": [
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/full/update_0312",
+      "bytes": 7152917558,
+      "save_seconds": 18.872285492000174
+    },
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/full/update_0625",
+      "bytes": 7152917558,
+      "save_seconds": 17.009830345999944
+    },
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/full/update_0937",
+      "bytes": 7152917558,
+      "save_seconds": 16.933364431999507
+    },
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/full/update_1250",
+      "bytes": 7152917558,
+      "save_seconds": 17.80957303700052
+    }
+  ],
+  "displacement_l2": {
+    "625": 10.004147864891314,
+    "1250": 10.635608768862879
+  },
+  "adapter_init_sha256": null,
+  "overhead": {
+    "reference_bytes": 2384199680,
+    "reference_transfer_seconds": 1.5951431040000443,
+    "penalty_compute_seconds": 0.0,
+    "oplora_preprocess": null,
+    "oplora_export_seconds": null
+  }
+}

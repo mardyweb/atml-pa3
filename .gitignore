@@ -1,0 +1,14 @@
+# large artefacts - never commit (manual: no raw datasets / unnecessary checkpoints)
+outputs/
+data/*.parquet
+data/*.arrow
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+# keep small machine-readable results
+!results/**

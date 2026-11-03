@@ -1,0 +1,17 @@
+# Task 1 environment (Colab already ships torch; versions below were used for the reported runs -
+# record the exact versions printed by `pip freeze > results/task1/pip_freeze.txt` after installing)
+torch>=2.3
+transformers>=4.56
+peft>=0.14
+datasets>=2.19
+accelerate>=0.30
+safetensors>=0.4
+sentencepiece
+pyyaml
+numpy
+pandas
+matplotlib
+tabulate
+tqdm
+# lm-evaluation-harness >= 0.4.13 (needed for the `enable_thinking` model arg used for GSM8K)
+lm_eval[hf]>=0.4.13

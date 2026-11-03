@@ -1,0 +1,7 @@
+{
+  "condition": "l2sp",
+  "source": "/content/pa3_out/task1/checkpoints/l2sp/update_1250/model",
+  "export_seconds": 11.555489100999694,
+  "exported_bytes": 1203563926,
+  "dest": "/content/pa3_out/task1/models/l2sp"
+}

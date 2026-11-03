@@ -1,0 +1,23 @@
+{
+  "condition": "baseline",
+  "gsm8k_flexible_em": 0.42835481425322214,
+  "gsm8k_flexible_em_stderr": 0.013630362189382145,
+  "gsm8k_strict_em": 0.0,
+  "gsm8k_truncated_rate": 0.01061410159211524,
+  "gsm8k_unextractable_rate": 0.0,
+  "gsm8k_mean_generated_tokens": 227.0940106141016,
+  "gsm8k_n": 1319,
+  "hellaswag_acc": 0.3752240589523999,
+  "hellaswag_acc_norm": 0.4736108344951205,
+  "hellaswag_acc_norm_stderr": 0.004982826916687033,
+  "boolq_acc": 0.6443425076452599,
+  "boolq_acc_stderr": 0.00837272663997743,
+  "arc_easy_acc": 0.6077441077441077,
+  "arc_easy_acc_norm": 0.5597643097643098,
+  "arc_easy_acc_norm_stderr": 0.010186228624515719,
+  "nonthinking_template_verified": true,
+  "lm_eval_results_files": [
+    "/content/pa3_out/task1/lm_eval_raw/baseline/gsm8k/__content__pa3_out__task1__models__baseline/results_2026-11-03T22-02-06.990439.json",
+    "/content/pa3_out/task1/lm_eval_raw/baseline/other/__content__pa3_out__task1__models__baseline/results_2026-11-03T22-05-52.005208.json"
+  ]
+}

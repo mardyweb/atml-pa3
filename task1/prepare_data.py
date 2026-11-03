@@ -31,7 +31,7 @@ def main():
     tok = load_tokenizer()
 
     print("Loading GSM8K test questions for contamination filtering ...")
-    gsm_test = load_dataset("gsm8k", "main", split="test")
+    gsm_test = load_dataset("openai/gsm8k", "main", split="test")
     gsm_norm = {normalize_text(q) for q in gsm_test["question"]}
 
     print("Streaming MetaMathQA in source order ...")

@@ -13,8 +13,8 @@ from common import SEED, hellaswag_context, results_dir, write_json
 
 def main():
     rng = np.random.default_rng(SEED)
-    gsm = load_dataset("gsm8k", "main", split="test")
-    hs = load_dataset("hellaswag", split="validation")
+    gsm = load_dataset("openai/gsm8k", "main", split="test")
+    hs = load_dataset("Rowan/hellaswag", split="validation")
     gsm_idx = sorted(rng.choice(len(gsm), size=32, replace=False).tolist())
     hs_idx = sorted(rng.choice(len(hs), size=32, replace=False).tolist())
     probe = {

@@ -1,0 +1,7 @@
+{
+  "condition": "full",
+  "source": "/content/pa3_out/task1/checkpoints/full/update_1250/model",
+  "export_seconds": 11.524565048999648,
+  "exported_bytes": 1203563926,
+  "dest": "/content/pa3_out/task1/models/full"
+}

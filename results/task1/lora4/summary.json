@@ -1,0 +1,51 @@
+{
+  "method": "lora4",
+  "config": {
+    "kind": "lora",
+    "lr": 0.0002,
+    "lam": 0.0,
+    "r": 4,
+    "alpha": 8,
+    "k": null
+  },
+  "seed": 6304,
+  "trainable_params": 2523136,
+  "total_params": 598573056,
+  "adapter_params": 2523136,
+  "train_seconds": 9622.790074182001,
+  "resumed_from_update": 0,
+  "peak_mem_allocated_bytes": 12108510208,
+  "peak_mem_reserved_bytes": 36484153344,
+  "skipped_updates": [],
+  "checkpoints": [
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/lora4/update_0312",
+      "bytes": 30680982,
+      "save_seconds": 0.6945316399996955
+    },
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/lora4/update_0625",
+      "bytes": 30680982,
+      "save_seconds": 0.6570389779999459
+    },
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/lora4/update_0937",
+      "bytes": 30680982,
+      "save_seconds": 0.6797545270001137
+    },
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/lora4/update_1250",
+      "bytes": 30680982,
+      "save_seconds": 0.6589095359995554
+    }
+  ],
+  "displacement_l2": {},
+  "adapter_init_sha256": "5e614b53e0c5dc504ddf61e3cc79a1d59e8a77b092ebc4553774d73f04b9ee66",
+  "overhead": {
+    "reference_bytes": 0,
+    "reference_transfer_seconds": 0.0,
+    "penalty_compute_seconds": 0.0,
+    "oplora_preprocess": null,
+    "oplora_export_seconds": null
+  }
+}

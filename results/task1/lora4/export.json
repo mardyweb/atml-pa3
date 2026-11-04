@@ -1,0 +1,10 @@
+{
+  "condition": "lora4",
+  "merged_vs_unmerged_max_abs_diff": 2.0546875,
+  "merged_vs_unmerged_mean_abs_diff": 0.14305292069911957,
+  "source": "/content/pa3_out/task1/checkpoints/lora4/update_1250/adapter",
+  "adapter_bytes": 10149849,
+  "export_seconds": 6.285846037000738,
+  "exported_bytes": 1203564093,
+  "dest": "/content/pa3_out/task1/models/lora4"
+}

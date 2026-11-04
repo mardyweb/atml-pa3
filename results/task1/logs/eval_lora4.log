@@ -1,0 +1,128 @@
+$ /usr/bin/python3 -m lm_eval --model hf --model_args pretrained=/content/pa3_out/task1/models/lora4,dtype=float16,enable_thinking=False --tasks gsm8k_cot --num_fewshot 0 --apply_chat_template --batch_size 16 --gen_kwargs max_gen_toks=1024,do_sample=False --log_samples --output_path /content/pa3_out/task1/lm_eval_raw/lora4/gsm8k --seed 6304
+2026-11-04:14:40:19 INFO     [config.evaluate_config:357] Using default fewshot_as_multiturn=True.
+2026-11-04:14:40:31 INFO     [_cli.run:392] Selected Tasks: ['gsm8k_cot']
+2026-11-04:14:40:32 INFO     [evaluator:214] Setting random seed to 6304 | Setting numpy seed to 6304 | Setting torch manual seed to 6304 | Setting fewshot manual seed to 6304
+2026-11-04:14:40:32 WARNING  [evaluator:226] generation_kwargs: {'max_gen_toks': 1024, 'do_sample': False} specified through cli, these settings will update set parameters in yaml tasks. Ensure 'do_sample=True' for non-greedy decoding!
+2026-11-04:14:40:32 INFO     [evaluator:239] Initializing hf model, with arguments: {'pretrained': '/content/pa3_out/task1/models/lora4', 'dtype': 'float16', 'enable_thinking': False}
+2026-11-04:14:40:35 INFO     [models.huggingface:289] Using device 'cuda:0'
+2026-11-04:14:40:36 INFO     [models.huggingface:582] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda:0'}
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 1097.55it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 82364.87 examples/s]
+
+Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 288620.98 examples/s]
+2026-11-04:14:40:45 INFO     [evaluator_utils:472] Selected tasks:
+2026-11-04:14:40:45 INFO     [evaluator_utils:506] Task: gsm8k_cot (gsm8k/gsm8k-cot.yaml)
+2026-11-04:14:40:45 INFO     [evaluator:314] gsm8k_cot: Using gen_kwargs: {'do_sample': False, 'until': ['Q:', '</s>', '<|im_end|>'], 'max_gen_toks': 1024}
+2026-11-04:14:40:45 WARNING  [evaluator:335] Overwriting default num_fewshot of gsm8k_cot from 8 to 0
+2026-11-04:14:40:45 INFO     [api.task:312] Building contexts for gsm8k_cot on rank 0...
+
+100%|██████████| 1319/1319 [00:02<00:00, 525.96it/s]
+2026-11-04:14:40:48 INFO     [evaluator:589] Running generate_until requests
+
+Running generate_until requests: 100%|█████████▉| 1313/1319 [19:24<00:03,  1.78it/s]
+Running generate_until requests: 100%|██████████| 1319/1319 [19:24<00:00,  1.13it/s]
+2026-11-04:15:00:21 INFO     [loggers.evaluation_tracker:247] Saving results aggregated
+2026-11-04:15:00:21 INFO     [loggers.evaluation_tracker:119] Saving per-task samples to /content/pa3_out/task1/lm_eval_raw/lora4/gsm8k/__content__pa3_out__task1__models__lora4/*.jsonl
+hf ({'pretrained': '/content/pa3_out/task1/models/lora4', 'dtype': 'float16', 'enable_thinking': False}), gen_kwargs: ({'max_gen_toks': 1024, 'do_sample': False}), limit: None, num_fewshot: 0, batch_size: 16
+|  Tasks  |Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
+|---------|------:|----------------|-----:|-----------|---|-----:|---|-----:|
+|gsm8k_cot|      3|flexible-extract|     0|exact_match|↑  |0.5914|±  |0.0135|
+|         |       |strict-match    |     0|exact_match|↑  |0.0000|±  |0.0000|
+
+$ /usr/bin/python3 -m lm_eval --model hf --model_args pretrained=/content/pa3_out/task1/models/lora4,dtype=float16 --tasks hellaswag,boolq,arc_easy --num_fewshot 0 --batch_size auto --log_samples --output_path /content/pa3_out/task1/lm_eval_raw/lora4/other --seed 6304
+2026-11-04:15:00:33 INFO     [_cli.run:392] Selected Tasks: ['hellaswag', 'boolq', 'arc_easy']
+2026-11-04:15:00:34 INFO     [evaluator:214] Setting random seed to 6304 | Setting numpy seed to 6304 | Setting torch manual seed to 6304 | Setting fewshot manual seed to 6304
+2026-11-04:15:00:34 INFO     [evaluator:239] Initializing hf model, with arguments: {'pretrained': '/content/pa3_out/task1/models/lora4', 'dtype': 'float16'}
+2026-11-04:15:00:38 INFO     [models.huggingface:289] Using device 'cuda:0'
+2026-11-04:15:00:38 INFO     [models.huggingface:582] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda:0'}
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 1031.81it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Generating train split: 100%|██████████| 39905/39905 [00:00<00:00, 293830.35 examples/s]
+
+Generating test split: 100%|██████████| 10003/10003 [00:00<00:00, 272564.77 examples/s]
+
+Generating validation split: 100%|██████████| 10042/10042 [00:00<00:00, 284341.36 examples/s]
+
+Map: 100%|██████████| 39905/39905 [00:05<00:00, 6644.35 examples/s]
+Map: 100%|██████████| 39905/39905 [00:05<00:00, 7572.34 examples/s]
+
+Map: 100%|██████████| 10042/10042 [00:01<00:00, 7589.70 examples/s]
+2026-11-04:15:01:01 WARNING  [api.task:734] [Task: boolq] metric acc is defined, but aggregation is not. using default aggregation=mean
+2026-11-04:15:01:01 WARNING  [api.task:746] [Task: boolq] metric acc is defined, but higher_is_better is not. using default higher_is_better=True
+
+Generating train split: 100%|██████████| 9427/9427 [00:00<00:00, 403688.81 examples/s]
+
+Generating validation split: 100%|██████████| 3270/3270 [00:00<00:00, 344737.32 examples/s]
+
+Generating test split: 100%|██████████| 3245/3245 [00:00<00:00, 358936.59 examples/s]
+
+Generating train split: 100%|██████████| 2251/2251 [00:00<00:00, 350199.49 examples/s]
+
+Generating test split: 100%|██████████| 2376/2376 [00:00<00:00, 424884.52 examples/s]
+
+Generating validation split: 100%|██████████| 570/570 [00:00<00:00, 161942.24 examples/s]
+2026-11-04:15:01:17 INFO     [evaluator_utils:472] Selected tasks:
+2026-11-04:15:01:17 INFO     [evaluator_utils:506] Task: arc_easy (arc/arc_easy.yaml)
+2026-11-04:15:01:17 INFO     [evaluator_utils:506] Task: boolq (super_glue/boolq/default.yaml)
+2026-11-04:15:01:17 INFO     [evaluator_utils:506] Task: hellaswag (hellaswag/hellaswag.yaml)
+2026-11-04:15:01:17 WARNING  [evaluator:335] Overwriting default num_fewshot of hellaswag from None to 0
+2026-11-04:15:01:17 WARNING  [evaluator:335] Overwriting default num_fewshot of boolq from None to 0
+2026-11-04:15:01:17 WARNING  [evaluator:335] Overwriting default num_fewshot of arc_easy from None to 0
+2026-11-04:15:01:17 INFO     [api.task:312] Building contexts for hellaswag on rank 0...
+
+100%|█████████▉| 10014/10042 [00:08<00:00, 1174.62it/s]
+100%|██████████| 10042/10042 [00:08<00:00, 1122.59it/s]
+2026-11-04:15:01:27 INFO     [api.task:312] Building contexts for boolq on rank 0...
+
+100%|██████████| 3270/3270 [00:01<00:00, 1727.48it/s]
+2026-11-04:15:01:29 INFO     [api.task:312] Building contexts for arc_easy on rank 0...
+
+100%|██████████| 2376/2376 [00:05<00:00, 462.29it/s]
+2026-11-04:15:01:34 INFO     [evaluator:589] Running loglikelihood requests
+
+Tokenizing inputs: 100%|█████████▉| 56067/56209 [00:27<00:00, 3702.51it/s]
+Tokenizing inputs: 100%|██████████| 56209/56209 [00:27<00:00, 2076.84it/s]
+
+Running loglikelihood requests: 100%|█████████▉| 56113/56209 [01:23<00:00, 1366.62it/s]
+Running loglikelihood requests: 100%|██████████| 56209/56209 [01:23<00:00, 670.29it/s] 
+2026-11-04:15:03:46 INFO     [loggers.evaluation_tracker:247] Saving results aggregated
+2026-11-04:15:03:46 INFO     [loggers.evaluation_tracker:119] Saving per-task samples to /content/pa3_out/task1/lm_eval_raw/lora4/other/__content__pa3_out__task1__models__lora4/*.jsonl
+Passed argument batch_size = auto:1. Detecting largest batch size
+Determined largest batch size: 64
+hf ({'pretrained': '/content/pa3_out/task1/models/lora4', 'dtype': 'float16'}), gen_kwargs: ({}), limit: None, num_fewshot: 0, batch_size: auto (64)
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy |      1|none  |     0|acc     |↑  |0.6561|±  |0.0097|
+|         |       |none  |     0|acc_norm|↑  |0.6284|±  |0.0099|
+|boolq    |      2|none  |     0|acc     |↑  |0.6957|±  |0.0080|
+|hellaswag|      1|none  |     0|acc     |↑  |0.3760|±  |0.0048|
+|         |       |none  |     0|acc_norm|↑  |0.4741|±  |0.0050|
+
+{
+  "condition": "lora4",
+  "gsm8k_flexible_em": 0.5913570887035633,
+  "gsm8k_flexible_em_stderr": 0.013540639733342416,
+  "gsm8k_strict_em": 0.0,
+  "gsm8k_truncated_rate": 0.006823351023502654,
+  "gsm8k_unextractable_rate": 0.0,
+  "gsm8k_mean_generated_tokens": 139.06595905989386,
+  "gsm8k_n": 1319,
+  "hellaswag_acc": 0.3760207130053774,
+  "hellaswag_acc_norm": 0.47410874327823144,
+  "hellaswag_acc_norm_stderr": 0.004983087049281781,
+  "boolq_acc": 0.6957186544342507,
+  "boolq_acc_stderr": 0.008047241372069726,
+  "arc_easy_acc": 0.6561447811447811,
+  "arc_easy_acc_norm": 0.6283670033670034,
+  "arc_easy_acc_norm_stderr": 0.009915897123658517,
+  "nonthinking_template_verified": true,
+  "lm_eval_results_files": [
+    "/content/pa3_out/task1/lm_eval_raw/lora4/gsm8k/__content__pa3_out__task1__models__lora4/results_2026-11-04T15-00-21.097397.json",
+    "/content/pa3_out/task1/lm_eval_raw/lora4/other/__content__pa3_out__task1__models__lora4/results_2026-11-04T15-03-46.828709.json"
+  ]
+}

@@ -665,7 +665,6 @@ toml==0.10.2
 tomlkit==0.14.0
 toolz==0.12.1
 torch==2.11.0+cu130
-torchao==0.10.0
 torchaudio==2.11.0+cu130
 torchcodec==0.11.0+cu130
 torchdata==0.11.0

@@ -1,0 +1,41 @@
+{
+  "method": "lora16",
+  "config": {
+    "kind": "lora",
+    "lr": 0.0002,
+    "lam": 0.0,
+    "r": 16,
+    "alpha": 32,
+    "k": null
+  },
+  "seed": 6304,
+  "trainable_params": 10092544,
+  "total_params": 606142464,
+  "adapter_params": 10092544,
+  "train_seconds": 5075.459633928,
+  "resumed_from_update": 625,
+  "peak_mem_allocated_bytes": 10815120896,
+  "peak_mem_reserved_bytes": 51172605952,
+  "skipped_updates": [],
+  "checkpoints": [
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/lora16/update_0937",
+      "bytes": 121514920,
+      "save_seconds": 0.8567343049999181
+    },
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/lora16/update_1250",
+      "bytes": 121514920,
+      "save_seconds": 1.0186764110003423
+    }
+  ],
+  "displacement_l2": {},
+  "adapter_init_sha256": "460c7cc88b3aac2641545bb8a10d4ac907463169019cb5c8d05e1c9e5749e85a",
+  "overhead": {
+    "reference_bytes": 0,
+    "reference_transfer_seconds": 0.0,
+    "penalty_compute_seconds": 0.0,
+    "oplora_preprocess": null,
+    "oplora_export_seconds": null
+  }
+}

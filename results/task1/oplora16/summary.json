@@ -1,0 +1,64 @@
+{
+  "method": "oplora16",
+  "config": {
+    "kind": "oplora",
+    "lr": 0.0002,
+    "lam": 0.0,
+    "r": 16,
+    "alpha": 32,
+    "k": 128
+  },
+  "seed": 6304,
+  "trainable_params": 10092544,
+  "total_params": 606142464,
+  "adapter_params": 10092544,
+  "train_seconds": 12948.037511491999,
+  "resumed_from_update": 0,
+  "peak_mem_allocated_bytes": 12582171648,
+  "peak_mem_reserved_bytes": 37039898624,
+  "skipped_updates": [],
+  "checkpoints": [
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/oplora16/update_0312",
+      "bytes": 161943443,
+      "save_seconds": 1.432189085000573
+    },
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/oplora16/update_0625",
+      "bytes": 161943443,
+      "save_seconds": 1.4089640750007675
+    },
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/oplora16/update_0937",
+      "bytes": 161943443,
+      "save_seconds": 1.425822175000576
+    },
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/oplora16/update_1250",
+      "bytes": 161943443,
+      "save_seconds": 1.4867492049997963
+    }
+  ],
+  "displacement_l2": {},
+  "adapter_init_sha256": "460c7cc88b3aac2641545bb8a10d4ac907463169019cb5c8d05e1c9e5749e85a",
+  "overhead": {
+    "reference_bytes": 0,
+    "reference_transfer_seconds": 0.0,
+    "penalty_compute_seconds": 0.0,
+    "oplora_preprocess": {
+      "preprocess_seconds": 16.6134285320004,
+      "basis_bytes": 322961408,
+      "n_matrices": 196
+    },
+    "oplora_export_seconds": {
+      "312": 0.6257705160005571,
+      "625": 0.616588603999844,
+      "937": 0.6298076120001497,
+      "1250": 0.6302035520020581
+    }
+  },
+  "oplora_constraint_check": {
+    "max_abs_residual": 3.9675040170550346e-05,
+    "ok": true
+  }
+}

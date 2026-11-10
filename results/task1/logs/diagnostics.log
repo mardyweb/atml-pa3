@@ -1,0 +1,38 @@
+
+Loading weights: 100%|██████████| 311/311 [00:01<00:00, 156.33it/s]
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 504.08it/s]
+full_mid 0 {'rho_k': 0.13401, 'eta': 0.01324, 'dW_fro': 0.61639, 'W0_fro': 46.54004, 'R_math_mean': 0.05068, 'R_nonmath_mean': 0.02586, 'R_math_median': 0.05063, 'R_nonmath_median': 0.02658}
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 5350.93it/s]
+full_mid 13 {'rho_k': 0.14837, 'eta': 0.01541, 'dW_fro': 0.65624, 'W0_fro': 42.58564, 'R_math_mean': 0.05745, 'R_nonmath_mean': 0.03041, 'R_math_median': 0.05743, 'R_nonmath_median': 0.02983}
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 4990.57it/s]
+full_mid 27 {'rho_k': 0.1154, 'eta': 0.01248, 'dW_fro': 0.59702, 'W0_fro': 47.84977, 'R_math_mean': 0.02001, 'R_nonmath_mean': 0.02819, 'R_math_median': 0.01959, 'R_nonmath_median': 0.02862}
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 524.30it/s]
+full 0 {'rho_k': 0.13384, 'eta': 0.01371, 'dW_fro': 0.63798, 'W0_fro': 46.54004, 'R_math_mean': 0.05208, 'R_nonmath_mean': 0.02629, 'R_math_median': 0.05203, 'R_nonmath_median': 0.02697}
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 4436.60it/s]
+full 13 {'rho_k': 0.14834, 'eta': 0.01604, 'dW_fro': 0.68289, 'W0_fro': 42.58564, 'R_math_mean': 0.05786, 'R_nonmath_mean': 0.031, 'R_math_median': 0.05787, 'R_nonmath_median': 0.03007}
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 5086.95it/s]
+full 27 {'rho_k': 0.11474, 'eta': 0.01296, 'dW_fro': 0.62029, 'W0_fro': 47.84977, 'R_math_mean': 0.0199, 'R_nonmath_mean': 0.02849, 'R_math_median': 0.01943, 'R_nonmath_median': 0.02905}
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 519.64it/s]
+l2sp 0 {'rho_k': 0.13255, 'eta': 0.01131, 'dW_fro': 0.52644, 'W0_fro': 46.54004, 'R_math_mean': 0.04604, 'R_nonmath_mean': 0.02247, 'R_math_median': 0.04601, 'R_nonmath_median': 0.02336}
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 5402.52it/s]
+l2sp 13 {'rho_k': 0.14968, 'eta': 0.0137, 'dW_fro': 0.58361, 'W0_fro': 42.58564, 'R_math_mean': 0.04777, 'R_nonmath_mean': 0.02812, 'R_math_median': 0.0477, 'R_nonmath_median': 0.02741}
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 4765.40it/s]
+l2sp 27 {'rho_k': 0.10667, 'eta': 0.00788, 'dW_fro': 0.37696, 'W0_fro': 47.84977, 'R_math_mean': 0.01872, 'R_nonmath_mean': 0.02547, 'R_math_median': 0.01847, 'R_nonmath_median': 0.02585}
+lora4 0 {'rho_k': 0.14954, 'eta': 0.00976, 'dW_fro': 0.45405, 'W0_fro': 46.54004, 'R_math_mean': 0.04883, 'R_nonmath_mean': 0.0242, 'R_math_median': 0.04877, 'R_nonmath_median': 0.02792}
+lora4 13 {'rho_k': 0.14529, 'eta': 0.01081, 'dW_fro': 0.4602, 'W0_fro': 42.58564, 'R_math_mean': 0.06835, 'R_nonmath_mean': 0.01942, 'R_math_median': 0.06814, 'R_nonmath_median': 0.01879}
+lora4 27 {'rho_k': 0.09998, 'eta': 0.00806, 'dW_fro': 0.38578, 'W0_fro': 47.84977, 'R_math_mean': 0.01031, 'R_nonmath_mean': 0.00824, 'R_math_median': 0.00994, 'R_nonmath_median': 0.0073}
+lora16 0 {'rho_k': 0.13821, 'eta': 0.01468, 'dW_fro': 0.68326, 'W0_fro': 46.54004, 'R_math_mean': 0.05928, 'R_nonmath_mean': 0.01712, 'R_math_median': 0.05921, 'R_nonmath_median': 0.01757}
+lora16 13 {'rho_k': 0.14727, 'eta': 0.01835, 'dW_fro': 0.7816, 'W0_fro': 42.58564, 'R_math_mean': 0.08427, 'R_nonmath_mean': 0.02529, 'R_math_median': 0.08429, 'R_nonmath_median': 0.0239}
+lora16 27 {'rho_k': 0.11258, 'eta': 0.01121, 'dW_fro': 0.53629, 'W0_fro': 47.84977, 'R_math_mean': 0.00907, 'R_nonmath_mean': 0.02063, 'R_math_median': 0.00894, 'R_nonmath_median': 0.02334}
+oplora16 0 {'rho_k': 0.0, 'eta': 0.0147, 'dW_fro': 0.68419, 'W0_fro': 46.54004, 'R_math_mean': 0.06115, 'R_nonmath_mean': 0.01914, 'R_math_median': 0.06086, 'R_nonmath_median': 0.01959}
+oplora16 13 {'rho_k': 0.0, 'eta': 0.01886, 'dW_fro': 0.80322, 'W0_fro': 42.58564, 'R_math_mean': 0.08925, 'R_nonmath_mean': 0.02692, 'R_math_median': 0.08936, 'R_nonmath_median': 0.02602}
+oplora16 27 {'rho_k': 0.0, 'eta': 0.00951, 'dW_fro': 0.45528, 'W0_fro': 47.84977, 'R_math_mean': 0.0096, 'R_nonmath_mean': 0.01911, 'R_math_median': 0.00965, 'R_nonmath_median': 0.02117}

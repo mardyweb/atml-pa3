@@ -1,3 +1,6 @@
-method,trainable params,train time (min),peak mem alloc (GB),peak mem reserved (GB),recovery ckpt (GB),adapter/model export (MB),skipped updates,displacement ||θ-θ0|| (mid / final),overhead
-full,"596,049,920",95.4,20.98,40.35,7.15,1203.6,0,10.004 / 10.636,-
-l2sp,"596,049,920",98.8,23.36,40.38,7.15,1203.6,0,6.449 / 6.279,"ref 2.38 GB, penalty 28s"
+method,GPU,trainable params,train time (min),peak mem alloc (GB),peak mem reserved (GB),recovery ckpt (GB),adapter/model export (MB),skipped updates,displacement ||θ-θ0|| (mid / final),overhead
+full,-,"596,049,920",95.4,20.98,40.35,7.15,1203.6,0,10.004 / 10.636,-
+l2sp,-,"596,049,920",98.8,23.36,40.38,7.15,1203.6,0,6.449 / 6.279,"ref 2.38 GB, penalty 28s"
+lora4,-,"2,523,136",160.4,12.11,36.48,0.03,10.1,0,-,-
+lora16,Tesla T4,"10,092,544",180.3,12.23,15.34,0.12,40.4,0,-,-
+oplora16,-,"10,092,544",215.8,12.58,37.04,0.16,40.4,0,-,"SVD 16.6s, bases 323 MB, export 2.5s"

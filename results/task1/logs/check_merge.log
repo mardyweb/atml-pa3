@@ -1,0 +1,59 @@
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 477.37it/s]
+
+Loading weights: 100%|██████████| 311/311 [00:01<00:00, 221.23it/s]
+lora4 {
+ "merged_vs_unmerged": {
+  "max_abs_diff": 0.1162109375,
+  "mean_abs_diff": 0.0074664384592324495,
+  "top1_agreement": 0.9999999900658926,
+  "mean_kl": 2.4483408803159062e-05,
+  "n_positions": 186
+ }
+}
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 2011.72it/s]
+
+Loading weights: 100%|██████████| 311/311 [00:01<00:00, 271.95it/s]
+lora16 {
+ "merged_vs_unmerged": {
+  "max_abs_diff": 0.135986328125,
+  "mean_abs_diff": 0.007059674011543393,
+  "top1_agreement": 0.9999999900658926,
+  "mean_kl": 2.5919084388685103e-05,
+  "n_positions": 186
+ }
+}
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 5936.79it/s]
+
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 320.55it/s]
+
+Loading weights: 100%|██████████| 311/311 [00:01<00:00, 198.04it/s]
+oplora16 {
+ "constraints": {
+  "max_abs_residual": 3.967341035604477e-05,
+  "ok": true
+ },
+ "projected_adapter_vs_training_forward": {
+  "max_abs_diff": 0.140625,
+  "mean_abs_diff": 0.006590572573865454,
+  "top1_agreement": 0.9895833233992258,
+  "mean_kl": 2.4727498688055977e-05,
+  "n_positions": 186
+ },
+ "merged_vs_training_forward": {
+  "max_abs_diff": 0.1171875,
+  "mean_abs_diff": 0.007458123688896497,
+  "top1_agreement": 0.9999999900658926,
+  "mean_kl": 3.063383762006803e-05,
+  "n_positions": 186
+ },
+ "merged_vs_projected_adapter": {
+  "max_abs_diff": 0.15625,
+  "mean_abs_diff": 0.00742792555441459,
+  "top1_agreement": 0.9895833233992258,
+  "mean_kl": 2.2712578053566784e-05,
+  "n_positions": 186
+ }
+}

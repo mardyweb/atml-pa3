@@ -1,0 +1,22 @@
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 522.04it/s]
+baseline: 24 responses in 107.3s
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 493.38it/s]
+full_mid: 24 responses in 196.6s
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 483.94it/s]
+full: 24 responses in 218.3s
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 499.51it/s]
+l2sp: 24 responses in 186.4s
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 525.31it/s]
+lora4: 24 responses in 112.4s
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 1320.69it/s]
+lora16: 24 responses in 128.0s
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 8895.48it/s]
+oplora16: 24 responses in 131.1s
+wrote /content/atml-pa3/results/task1/qualitative

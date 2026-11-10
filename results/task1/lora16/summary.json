@@ -9,24 +9,35 @@
     "k": null
   },
   "seed": 6304,
+  "gpu": "Tesla T4",
   "trainable_params": 10092544,
   "total_params": 606142464,
   "adapter_params": 10092544,
-  "train_seconds": 5075.459633928,
-  "resumed_from_update": 625,
-  "peak_mem_allocated_bytes": 10815120896,
-  "peak_mem_reserved_bytes": 51172605952,
+  "train_seconds": 10815.318580705001,
+  "resumed_from_update": 0,
+  "peak_mem_allocated_bytes": 12229620736,
+  "peak_mem_reserved_bytes": 15340666880,
   "skipped_updates": [],
   "checkpoints": [
     {
+      "dir": "/content/pa3_out/task1/checkpoints/lora16/update_0312",
+      "bytes": 121514920,
+      "save_seconds": 0.8074371719999363
+    },
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/lora16/update_0625",
+      "bytes": 121514920,
+      "save_seconds": 0.5758413300000029
+    },
+    {
       "dir": "/content/pa3_out/task1/checkpoints/lora16/update_0937",
       "bytes": 121514920,
-      "save_seconds": 0.8567343049999181
+      "save_seconds": 0.6821487149991299
     },
     {
       "dir": "/content/pa3_out/task1/checkpoints/lora16/update_1250",
       "bytes": 121514920,
-      "save_seconds": 1.0186764110003423
+      "save_seconds": 0.6792163360005361
     }
   ],
   "displacement_l2": {},

@@ -1,0 +1,33 @@
+{
+  "method": "lora16",
+  "update": 1250,
+  "train_seconds": 10815.317382371,
+  "peak_mem_allocated_bytes": 12229620736,
+  "peak_mem_reserved_bytes": 15340666880,
+  "checkpoints": [
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/lora16/update_0312",
+      "bytes": 121514920,
+      "save_seconds": 0.8074371719999363
+    },
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/lora16/update_0625",
+      "bytes": 121514920,
+      "save_seconds": 0.5758413300000029
+    },
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/lora16/update_0937",
+      "bytes": 121514920,
+      "save_seconds": 0.6821487149991299
+    },
+    {
+      "dir": "/content/pa3_out/task1/checkpoints/lora16/update_1250",
+      "bytes": 121514920,
+      "save_seconds": 0.6792163360005361
+    }
+  ],
+  "displacement_l2": {},
+  "overhead": {
+    "penalty_compute_seconds": 0.0
+  }
+}

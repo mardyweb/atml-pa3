@@ -11,12 +11,13 @@ task1/                 Task 1 – LLM fine-tuning (Full FT, L2-SP, LoRA-4/16, OP
   train.py             shared training loop, --method {full,l2sp,lora4,lora16,oplora16}
   oplora.py            orthogonal-projection LoRA (effective projected factors, SVD bases, export)
   export.py            merge adapters into fresh backbone copies, logits check, FP16 export
+  check_merge.py       careful merged-vs-unmerged / projected-vs-training-forward logit check (no padding)
   evaluate.py          lm-evaluation-harness: gsm8k_cot (0-shot, non-thinking chat template), hellaswag, boolq, arc_easy
   make_probe_set.py    32 GSM8K-test + 32 HellaSwag-val probe prompts (seed 6304)
   diagnostics.py       rho_k, eta, R(z) on down_proj of layers 0/13/27
   qualitative.py       168 greedy responses on first_plot_questions.yaml + 42-response annotation subset
   summarize.py         tables and figures from results/
-notebooks/PA3_Task1_colab.ipynb   Colab driver (one session per stage, Drive-backed)
+notebooks/PA3_Task1_run_all.ipynb   Colab driver: Runtime > Run all; skips finished steps, resumes interrupted runs
 results/task1/         machine-readable results, logs, split/probe IDs (committed)
 outputs/               checkpoints, exported models, raw lm-eval dumps (NOT committed)
 ```

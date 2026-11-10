@@ -74,7 +74,7 @@ def resources_table():
         ex = json.load(open(ex)) if ex.exists() else {}
         oh = s["overhead"]
         recs.append({
-            "method": m, "trainable params": f"{s['trainable_params']:,}",
+            "method": m, "GPU": s.get("gpu", "-"), "trainable params": f"{s['trainable_params']:,}",
             "train time (min)": f"{s['train_seconds']/60:.1f}",
             "peak mem alloc (GB)": f"{s['peak_mem_allocated_bytes']/1e9:.2f}",
             "peak mem reserved (GB)": f"{s['peak_mem_reserved_bytes']/1e9:.2f}",
@@ -117,6 +117,26 @@ def loss_plots():
         fig.tight_layout(); fig.savefig(FIG / "l2sp_penalty.png", dpi=160)
 
 
+def merge_table():
+    p = R / "merge_check.json"
+    if not p.exists():
+        return
+    d = json.load(open(p))
+    recs = []
+    for cond, res in d.items():
+        if not isinstance(res, dict):
+            continue
+        for name, v in res.items():
+            if isinstance(v, dict) and "top1_agreement" in v:
+                recs.append({"condition": cond, "comparison": name, "max |Δlogit|": round(v["max_abs_diff"], 3),
+                             "mean |Δlogit|": round(v["mean_abs_diff"], 4), "top-1 agreement": round(v["top1_agreement"], 4),
+                             "mean KL": f"{v['mean_kl']:.2e}", "positions": v["n_positions"]})
+    df = pd.DataFrame(recs)
+    df.to_csv(TAB / "merge_check.csv", index=False)
+    (TAB / "merge_check.md").write_text(df.to_markdown(index=False))
+    print(df.to_markdown(index=False))
+
+
 def diagnostics_table():
     p = R / "diagnostics.json"
     if not p.exists():
@@ -139,3 +159,4 @@ if __name__ == "__main__":
     resources_table()
     loss_plots()
     diagnostics_table()
+    merge_table()

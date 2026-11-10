@@ -198,14 +198,30 @@ def main():
     run_res.mkdir(parents=True, exist_ok=True)
     ckpt_root = out_dir() / "checkpoints" / args.method
     start_update, skipped = (load_checkpoint(model, cfg, opt, sched, scaler, ckpt_root) if args.resume else (0, []))
-    log_f = open(run_res / "train_log.jsonl", "a" if start_update > 0 else "w")
-    ckpt_info, displacement, penalty_time, prior_seconds = [], {}, 0.0, 0.0
-    if start_update > 0 and (run_res / "summary.json").exists():      # carry over logs from the interrupted segment
-        prev = json.load(open(run_res / "summary.json"))
+    log_path = run_res / "train_log.jsonl"
+    if start_update > 0 and log_path.exists():        # drop records written after the checkpoint we resume from
+        recs = [l for l in log_path.read_text().splitlines() if l.strip() and json.loads(l)["update"] <= start_update]
+        log_path.write_text("".join(r + "\n" for r in recs))
+    log_f = open(log_path, "a" if start_update > 0 else "w")
+    ckpt_info, displacement, penalty_time, prior_seconds, prior_peak = [], {}, 0.0, 0.0, (0, 0)
+    prev_path = next((p for p in (run_res / "progress.json", run_res / "summary.json") if p.exists()), None)
+    if start_update > 0 and prev_path is not None:       # carry over cumulative stats of the interrupted segment(s)
+        prev = json.load(open(prev_path))
         ckpt_info = [c for c in prev.get("checkpoints", []) if int(c["dir"][-4:]) <= start_update]
         displacement = {int(k): v for k, v in prev.get("displacement_l2", {}).items() if int(k) <= start_update}
         prior_seconds = prev.get("train_seconds", 0.0)
         penalty_time = prev.get("overhead", {}).get("penalty_compute_seconds", 0.0)
+        prior_peak = (prev.get("peak_mem_allocated_bytes", 0), prev.get("peak_mem_reserved_bytes", 0))
+    gpu_name = torch.cuda.get_device_name(0) if use_amp else "cpu"
+
+    def cumulative_stats():
+        return {
+            "train_seconds": prior_seconds + (time.perf_counter() - t_start),
+            "peak_mem_allocated_bytes": max(prior_peak[0], torch.cuda.max_memory_allocated() if use_amp else 0),
+            "peak_mem_reserved_bytes": max(prior_peak[1], torch.cuda.max_memory_reserved() if use_amp else 0),
+            "checkpoints": ckpt_info, "displacement_l2": displacement,
+            "overhead": {"penalty_compute_seconds": penalty_time},
+        }
     params = [p for p in model.parameters() if p.requires_grad]
     pad_id = tok.pad_token_id
 
@@ -270,19 +286,20 @@ def main():
                 displacement[step] = math.sqrt(d2)
                 print(f"||theta - theta_0||_2 at update {step}: {displacement[step]:.4f}")
             ckpt_info.append(save_checkpoint(model, cfg, opt, sched, scaler, step, ckpt_root, extra, skipped))
+            write_json({"method": args.method, "update": step, **cumulative_stats()}, run_res / "progress.json")
             print("saved", ckpt_info[-1])
 
     if use_amp: torch.cuda.synchronize()
-    train_seconds = prior_seconds + (time.perf_counter() - t_start)
     log_f.close()
+    stats = cumulative_stats()
 
     summary = {
-        "method": args.method, "config": cfg, "seed": SEED,
+        "method": args.method, "config": cfg, "seed": SEED, "gpu": gpu_name,
         "trainable_params": trainable, "total_params": total,
         "adapter_params": trainable if cfg["kind"] != "full" else 0,
-        "train_seconds": train_seconds, "resumed_from_update": start_update,
-        "peak_mem_allocated_bytes": torch.cuda.max_memory_allocated() if use_amp else 0,
-        "peak_mem_reserved_bytes": torch.cuda.max_memory_reserved() if use_amp else 0,
+        "train_seconds": stats["train_seconds"], "resumed_from_update": start_update,
+        "peak_mem_allocated_bytes": stats["peak_mem_allocated_bytes"],
+        "peak_mem_reserved_bytes": stats["peak_mem_reserved_bytes"],
         "skipped_updates": skipped, "checkpoints": ckpt_info,
         "displacement_l2": displacement,
         "adapter_init_sha256": init_hash,

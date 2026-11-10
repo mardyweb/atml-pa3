@@ -1,0 +1,169 @@
+$ /usr/bin/python3 -m lm_eval --model hf --model_args pretrained=/content/pa3_out/task1/models/lora16,dtype=float16,enable_thinking=False --tasks gsm8k_cot --num_fewshot 0 --apply_chat_template --batch_size 16 --gen_kwargs max_gen_toks=1024,do_sample=False --log_samples --output_path /content/pa3_out/task1/lm_eval_raw/lora16/gsm8k --seed 6304
+2026-11-10:18:51:22 INFO     [config.evaluate_config:357] Using default fewshot_as_multiturn=True.
+2026-11-10:18:51:39 INFO     [_cli.run:392] Selected Tasks: ['gsm8k_cot']
+2026-11-10:18:51:41 INFO     [evaluator:214] Setting random seed to 6304 | Setting numpy seed to 6304 | Setting torch manual seed to 6304 | Setting fewshot manual seed to 6304
+2026-11-10:18:51:41 WARNING  [evaluator:226] generation_kwargs: {'max_gen_toks': 1024, 'do_sample': False} specified through cli, these settings will update set parameters in yaml tasks. Ensure 'do_sample=True' for non-greedy decoding!
+2026-11-10:18:51:41 INFO     [evaluator:239] Initializing hf model, with arguments: {'pretrained': '/content/pa3_out/task1/models/lora16', 'dtype': 'float16', 'enable_thinking': False}
+2026-11-10:18:51:46 INFO     [models.huggingface:289] Using device 'cuda:0'
+2026-11-10:18:51:47 INFO     [models.huggingface:582] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda:0'}
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 852.60it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 146145.79 examples/s]
+
+Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 130287.95 examples/s]
+2026-11-10:18:51:53 INFO     [evaluator_utils:472] Selected tasks:
+2026-11-10:18:51:53 INFO     [evaluator_utils:506] Task: gsm8k_cot (gsm8k/gsm8k-cot.yaml)
+2026-11-10:18:51:53 INFO     [evaluator:314] gsm8k_cot: Using gen_kwargs: {'do_sample': False, 'until': ['Q:', '</s>', '<|im_end|>'], 'max_gen_toks': 1024}
+2026-11-10:18:51:53 WARNING  [evaluator:335] Overwriting default num_fewshot of gsm8k_cot from 8 to 0
+2026-11-10:18:51:53 INFO     [api.task:312] Building contexts for gsm8k_cot on rank 0...
+
+100%|██████████| 1319/1319 [00:03<00:00, 438.77it/s]
+2026-11-10:18:51:56 INFO     [evaluator:589] Running generate_until requests
+
+Running generate_until requests: 100%|█████████▉| 1313/1319 [19:36<00:03,  1.69it/s]
+Running generate_until requests: 100%|██████████| 1319/1319 [19:36<00:00,  1.12it/s]
+2026-11-10:19:11:42 INFO     [loggers.evaluation_tracker:247] Saving results aggregated
+2026-11-10:19:11:42 INFO     [loggers.evaluation_tracker:119] Saving per-task samples to /content/pa3_out/task1/lm_eval_raw/lora16/gsm8k/__content__pa3_out__task1__models__lora16/*.jsonl
+hf ({'pretrained': '/content/pa3_out/task1/models/lora16', 'dtype': 'float16', 'enable_thinking': False}), gen_kwargs: ({'max_gen_toks': 1024, 'do_sample': False}), limit: None, num_fewshot: 0, batch_size: 16
+|  Tasks  |Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
+|---------|------:|----------------|-----:|-----------|---|-----:|---|-----:|
+|gsm8k_cot|      3|flexible-extract|     0|exact_match|↑  |0.6224|±  |0.0134|
+|         |       |strict-match    |     0|exact_match|↑  |0.0000|±  |0.0000|
+
+$ /usr/bin/python3 -m lm_eval --model hf --model_args pretrained=/content/pa3_out/task1/models/lora16,dtype=float16 --tasks hellaswag,boolq,arc_easy --num_fewshot 0 --batch_size auto --log_samples --output_path /content/pa3_out/task1/lm_eval_raw/lora16/other --seed 6304
+2026-11-10:19:11:56 INFO     [_cli.run:392] Selected Tasks: ['hellaswag', 'boolq', 'arc_easy']
+2026-11-10:19:11:57 INFO     [evaluator:214] Setting random seed to 6304 | Setting numpy seed to 6304 | Setting torch manual seed to 6304 | Setting fewshot manual seed to 6304
+2026-11-10:19:11:57 INFO     [evaluator:239] Initializing hf model, with arguments: {'pretrained': '/content/pa3_out/task1/models/lora16', 'dtype': 'float16'}
+2026-11-10:19:12:00 INFO     [models.huggingface:289] Using device 'cuda:0'
+2026-11-10:19:12:01 INFO     [models.huggingface:582] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda:0'}
+
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 638.02it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Generating train split: 100%|██████████| 39905/39905 [00:00<00:00, 226149.51 examples/s]
+
+Generating test split: 100%|██████████| 10003/10003 [00:00<00:00, 202532.51 examples/s]
+
+Generating validation split: 100%|██████████| 10042/10042 [00:00<00:00, 211869.34 examples/s]
+
+Map: 100%|██████████| 39905/39905 [00:04<00:00, 7923.64 examples/s]
+Map: 100%|██████████| 39905/39905 [00:04<00:00, 8279.92 examples/s]
+
+Map: 100%|█████████▉| 10000/10042 [00:01<00:00, 8259.20 examples/s]
+Map: 100%|██████████| 10042/10042 [00:01<00:00, 7704.52 examples/s]
+2026-11-10:19:12:21 WARNING  [api.task:734] [Task: boolq] metric acc is defined, but aggregation is not. using default aggregation=mean
+2026-11-10:19:12:21 WARNING  [api.task:746] [Task: boolq] metric acc is defined, but higher_is_better is not. using default higher_is_better=True
+
+Generating train split: 100%|██████████| 9427/9427 [00:00<00:00, 314671.27 examples/s]
+
+Generating validation split: 100%|██████████| 3270/3270 [00:00<00:00, 205089.71 examples/s]
+
+Generating test split: 100%|██████████| 3245/3245 [00:00<00:00, 244859.52 examples/s]
+
+Generating train split: 100%|██████████| 2251/2251 [00:00<00:00, 252984.41 examples/s]
+
+Generating test split: 100%|██████████| 2376/2376 [00:00<00:00, 281651.25 examples/s]
+
+Generating validation split: 100%|██████████| 570/570 [00:00<00:00, 108237.65 examples/s]
+2026-11-10:19:12:27 INFO     [evaluator_utils:472] Selected tasks:
+2026-11-10:19:12:27 INFO     [evaluator_utils:506] Task: arc_easy (arc/arc_easy.yaml)
+2026-11-10:19:12:27 INFO     [evaluator_utils:506] Task: boolq (super_glue/boolq/default.yaml)
+2026-11-10:19:12:27 INFO     [evaluator_utils:506] Task: hellaswag (hellaswag/hellaswag.yaml)
+2026-11-10:19:12:27 WARNING  [evaluator:335] Overwriting default num_fewshot of hellaswag from None to 0
+2026-11-10:19:12:27 WARNING  [evaluator:335] Overwriting default num_fewshot of boolq from None to 0
+2026-11-10:19:12:27 WARNING  [evaluator:335] Overwriting default num_fewshot of arc_easy from None to 0
+2026-11-10:19:12:27 INFO     [api.task:312] Building contexts for hellaswag on rank 0...
+
+100%|█████████▉| 9993/10042 [00:09<00:00, 1200.42it/s]
+100%|██████████| 10042/10042 [00:09<00:00, 1005.07it/s]
+2026-11-10:19:12:38 INFO     [api.task:312] Building contexts for boolq on rank 0...
+
+100%|█████████▉| 3257/3270 [00:01<00:00, 1807.70it/s]
+100%|██████████| 3270/3270 [00:01<00:00, 1780.77it/s]
+2026-11-10:19:12:40 INFO     [api.task:312] Building contexts for arc_easy on rank 0...
+
+100%|██████████| 2376/2376 [00:05<00:00, 433.59it/s]
+2026-11-10:19:12:46 INFO     [evaluator:589] Running loglikelihood requests
+
+Tokenizing inputs: 100%|█████████▉| 56131/56209 [00:30<00:00, 2192.55it/s]
+Tokenizing inputs: 100%|██████████| 56209/56209 [00:30<00:00, 1827.43it/s]
+
+[W1110 19:13:25.129723754 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 24700256256 bytes (free: 3298623488, total: 15637086208).
+[W1110 19:13:28.155147735 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 21999124480 bytes (free: 1956446208, total: 15637086208).
+[W1110 19:13:32.426611336 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 21999124480 bytes (free: 3518824448, total: 15637086208).
+[W1110 19:13:35.227173996 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 19683868672 bytes (free: 3516727296, total: 15637086208).
+[W1110 19:13:39.205903857 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 19683868672 bytes (free: 5519507456, total: 15637086208).
+[W1110 19:13:42.823338912 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 17366515712 bytes (free: 4343005184, total: 15637086208).
+[W1110 19:13:45.378822270 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 17366515712 bytes (free: 5144117248, total: 15637086208).
+[W1110 19:13:48.874506747 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 15437135872 bytes (free: 5142020096, total: 15637086208).
+[W1110 19:13:51.001783852 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 15437135872 bytes (free: 6477905920, total: 15637086208).
+[W1110 19:13:53.148142490 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 13893632000 bytes (free: 6475808768, total: 15637086208).
+[W1110 19:13:56.876279164 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 13893632000 bytes (free: 7811694592, total: 15637086208).
+[W1110 19:13:58.963634635 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 12350128128 bytes (free: 7809597440, total: 15637086208).
+[W1110 19:14:00.306595679 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 12350128128 bytes (free: 8478588928, total: 15637086208).
+[W1110 19:14:02.041549867 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 10806624256 bytes (free: 8476491776, total: 15637086208).
+[W1110 19:14:04.058603143 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 10806624256 bytes (free: 9145483264, total: 15637086208).
+[W1110 19:14:06.645486982 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 9648996352 bytes (free: 9141288960, total: 15637086208).
+[W1110 19:14:07.446468968 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 9648996352 bytes (free: 163381248, total: 15637086208).
+[W1110 19:14:08.939430506 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 9648996352 bytes (free: 4319936512, total: 15637086208).
+[W1110 19:14:09.420382815 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 8491368448 bytes (free: 4315742208, total: 15637086208).
+[W1110 19:14:11.955472558 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 8491368448 bytes (free: 4319936512, total: 15637086208).
+[W1110 19:14:12.442173770 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 7333740544 bytes (free: 4317839360, total: 15637086208).
+[W1110 19:14:14.755732796 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 7333740544 bytes (free: 4319936512, total: 15637086208).
+[W1110 19:14:15.051347453 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 6561988608 bytes (free: 4317839360, total: 15637086208).
+[W1110 19:14:17.472673522 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 6561988608 bytes (free: 4319936512, total: 15637086208).
+[W1110 19:14:18.665347814 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 5790236672 bytes (free: 4317839360, total: 15637086208).
+[W1110 19:14:19.920415653 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 5790236672 bytes (free: 4319936512, total: 15637086208).
+[W1110 19:14:20.028550322 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 5018484736 bytes (free: 4317839360, total: 15637086208).
+[W1110 19:14:21.112152657 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 5018484736 bytes (free: 4319936512, total: 15637086208).
+[W1110 19:14:24.551426912 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 4246732800 bytes (free: 69009408, total: 15637086208).
+[W1110 19:14:25.471220460 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 4246732800 bytes (free: 73203712, total: 15637086208).
+
+Running loglikelihood requests: 100%|█████████▉| 55950/56209 [09:18<00:01, 257.04it/s]
+Running loglikelihood requests: 100%|█████████▉| 55977/56209 [09:18<00:00, 245.55it/s]
+Running loglikelihood requests: 100%|█████████▉| 56010/56209 [09:19<00:00, 259.78it/s]
+Running loglikelihood requests: 100%|█████████▉| 56040/56209 [09:19<00:00, 263.81it/s]
+Running loglikelihood requests: 100%|█████████▉| 56067/56209 [09:19<00:00, 256.67it/s]
+Running loglikelihood requests: 100%|█████████▉| 56093/56209 [09:19<00:00, 254.31it/s]
+Running loglikelihood requests: 100%|█████████▉| 56126/56209 [09:19<00:00, 275.14it/s]
+Running loglikelihood requests: 100%|█████████▉| 56155/56209 [09:19<00:00, 278.82it/s]
+Running loglikelihood requests: 100%|█████████▉| 56188/56209 [09:19<00:00, 293.46it/s]
+Running loglikelihood requests: 100%|██████████| 56209/56209 [09:19<00:00, 100.43it/s]
+2026-11-10:19:22:58 INFO     [loggers.evaluation_tracker:247] Saving results aggregated
+2026-11-10:19:22:58 INFO     [loggers.evaluation_tracker:119] Saving per-task samples to /content/pa3_out/task1/lm_eval_raw/lora16/other/__content__pa3_out__task1__models__lora16/*.jsonl
+Passed argument batch_size = auto:1. Detecting largest batch size
+Determined largest batch size: 9
+hf ({'pretrained': '/content/pa3_out/task1/models/lora16', 'dtype': 'float16'}), gen_kwargs: ({}), limit: None, num_fewshot: 0, batch_size: auto (9)
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy |      1|none  |     0|acc     |↑  |0.6654|±  |0.0097|
+|         |       |none  |     0|acc_norm|↑  |0.6368|±  |0.0099|
+|boolq    |      2|none  |     0|acc     |↑  |0.7080|±  |0.0080|
+|hellaswag|      1|none  |     0|acc     |↑  |0.3777|±  |0.0048|
+|         |       |none  |     0|acc_norm|↑  |0.4694|±  |0.0050|
+
+{
+  "condition": "lora16",
+  "gsm8k_flexible_em": 0.6224412433661866,
+  "gsm8k_flexible_em_stderr": 0.01335315066635854,
+  "gsm8k_strict_em": 0.0,
+  "gsm8k_truncated_rate": 0.0037907505686125853,
+  "gsm8k_unextractable_rate": 0.0,
+  "gsm8k_mean_generated_tokens": 137.65731614859743,
+  "gsm8k_n": 1319,
+  "hellaswag_acc": 0.3777136028679546,
+  "hellaswag_acc_norm": 0.46942840071698866,
+  "hellaswag_acc_norm_stderr": 0.004980445551991594,
+  "boolq_acc": 0.7079510703363915,
+  "boolq_acc_stderr": 0.007952834971031426,
+  "arc_easy_acc": 0.6654040404040404,
+  "arc_easy_acc_norm": 0.6367845117845118,
+  "arc_easy_acc_norm_stderr": 0.009868397136118761,
+  "nonthinking_template_verified": true,
+  "lm_eval_results_files": [
+    "/content/pa3_out/task1/lm_eval_raw/lora16/gsm8k/__content__pa3_out__task1__models__lora16/results_2026-11-10T19-11-42.936073.json",
+    "/content/pa3_out/task1/lm_eval_raw/lora16/other/__content__pa3_out__task1__models__lora16/results_2026-11-10T19-22-58.407687.json"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "condition": "oplora16",
+  "export_vs_training_forward_max_abs_diff": 1.9453125,
+  "oplora_constraint_check": {
+    "max_abs_residual": 3.967341035604477e-05,
+    "ok": true
+  },
+  "merged_vs_unmerged_max_abs_diff": 4.1015625,
+  "merged_vs_unmerged_mean_abs_diff": 0.4205397069454193,
+  "source": "/content/pa3_out/task1/checkpoints/oplora16/update_1250/adapter_projected",
+  "adapter_bytes": 40428523,
+  "export_seconds": 107.49203711000155,
+  "exported_bytes": 1203564093,
+  "dest": "/content/pa3_out/task1/models/oplora16"
+}

@@ -1,0 +1,141 @@
+=== math
+columns: ['dataset', 'model', 'sample_id', 'rollout_id', 'question_text', 'generated_token_ids', 'n_generated_text_tokens', 'hit_max_new_tokens', 'generated_text', 'gold_answer', 'extracted_answer', 'logp', 'kl_u_p']
+first row (truncated): {'dataset': 'math', 'model': 'qwen2_5_3b_instruct', 'sample_id': 'test:1000', 'rollout_id': '0', 'question_text': 'What is the positive value of the expression $\\sqrt{x^3 - 2^y}$ when $x = 5$ and', 'generated_token_ids': '[ 1249  1477   279  6785   897   315   279  7493  1124 11520 26888 45340\n    61 ', 'n_generated_text_tokens': '321', 'hit_max_new_tokens': 'False', 'generated_text': 'To find the positive value of the expression \\(\\sqrt{x^3 - 2^y}\\) when \\(x = 5\\)', 'gold_answer': '11', 'extracted_answer': '11', 'logp': '[-1.34180650e-01 -4.56410259e-01 -4.76837045e-07 -5.23399096e-03\n  0.00000000e+0', 'kl_u_p': '[20.71651  20.984638 29.887726 31.90979  37.541256 34.100357 31.02211\n 32.788425'}
+alignment mismatches: {'ids_vs_n': 0, 'logp_vs_n': 0, 'kl_vs_n': 0}
+  grouped 0/1000
+  grouped 100/1000
+  grouped 200/1000
+  grouped 300/1000
+  grouped 400/1000
+  grouped 500/1000
+  grouped 600/1000
+  grouped 700/1000
+  grouped 800/1000
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+Timeout during comparison
+  grouped 900/1000
+{
+ "scorer": "math-verify 0.9.0",
+ "version": "0.9.0",
+ "n_rollouts": 32000,
+ "null_extractions": 521,
+ "capped": 523,
+ "rollout_accuracy": 0.65859375,
+ "questions_with_any_correct": 913,
+ "mean_groups_per_question": 5.486,
+ "alignment_mismatches": {
+  "ids_vs_n": 0,
+  "logp_vs_n": 0,
+  "kl_vs_n": 0
+ }
+}
+=== mathvista
+columns: ['dataset', 'model', 'sample_id', 'rollout_id', 'question_text', 'generated_token_ids', 'n_generated_text_tokens', 'hit_max_new_tokens', 'generated_text', 'gold_answer', 'extracted_answer', 'logp', 'kl_u_p', 'n_image_tokens', 'n_prompt_text_tokens', 'n_generated_text_tokens_a', 'img_attn_total', 'prompt_text_attn_total', 'generated_text_attn_total']
+first row (truncated): {'dataset': 'mathvista', 'model': 'qwen2_5_vl_3b', 'sample_id': '1', 'rollout_id': '0', 'question_text': 'When a spring does work on an object, we cannot find the work by simply multiply', 'generated_token_ids': '[ 1249  1477   279  6010 17767   294  1124     8   429   279 10464   374\n 30649 ', 'n_generated_text_tokens': '418', 'hit_max_new_tokens': 'False', 'generated_text': 'To find the distance \\( d \\) that the spring is compressed, we need to consider ', 'gold_answer': '1.2', 'extracted_answer': '0.0115 \\, \\text{m}', 'logp': '[-7.43157029e-01 -7.45716453e-01 -1.23668760e-02 -4.46341448e-02\n -1.37816086e-0', 'kl_u_p': '[ 9.101642  15.625941  18.065872  17.748451  16.5974    14.846784\n 16.285595  17', 'n_image_tokens': '1404', 'n_prompt_text_tokens': '227', 'n_generated_text_tokens_a': '[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17\n  18  1', 'img_attn_total': '[0.06204748 0.05289455 0.04415751 0.06540571 0.05779429 0.05562858\n 0.06013759 0', 'prompt_text_attn_total': '[0.58084244 0.4247682  0.3778535  0.38908565 0.3699126  0.27751118\n 0.31547582 0', 'generated_text_attn_total': '[0.         0.11967824 0.17665315 0.18599479 0.21668965 0.23636548\n 0.29624066 0'}
+alignment mismatches: {'ids_vs_n': 0, 'logp_vs_n': 0, 'kl_vs_n': 0, 'img_attn_total_vs_n': 0, 'prompt_text_attn_total_vs_n': 0, 'generated_text_attn_total_vs_n': 0}
+  grouped 0/1000
+  grouped 100/1000
+  grouped 200/1000
+  grouped 300/1000
+  grouped 400/1000
+  grouped 500/1000
+  grouped 600/1000
+  grouped 700/1000
+  grouped 800/1000
+  grouped 900/1000
+{
+ "scorer": "MathVista testmini metadata rules (answer_type / choices / precision), letters for multiple choice",
+ "version": "reimplementation of MathVista normalize_extracted_answer + safe_equal",
+ "n_rollouts": 32000,
+ "null_extractions": 3032,
+ "capped": 487,
+ "rollout_accuracy": 0.536375,
+ "questions_with_any_correct": 894,
+ "mean_groups_per_question": 3.389,
+ "alignment_mismatches": {
+  "ids_vs_n": 0,
+  "logp_vs_n": 0,
+  "kl_vs_n": 0,
+  "img_attn_total_vs_n": 0,
+  "prompt_text_attn_total_vs_n": 0,
+  "generated_text_attn_total_vs_n": 0
+ }
+}

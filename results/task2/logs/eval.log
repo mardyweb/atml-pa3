@@ -1,0 +1,24 @@
+
+Loading weights: 100%|██████████| 311/311 [00:06<00:00, 49.92it/s]
+ground_test correct {"accuracy": 0.75, "pair_accuracy": 0.5625, "identical_answer_rate": 0.203125, "empty_answer_rate": 0.0, "mean_reference_nll": 0.7089020443777372, "generation_seconds_per_answer": 0.03887519984373711, "n_questions": 128}
+ground_test complementary {"accuracy": 0.1328125, "pair_accuracy": 0.015625, "identical_answer_rate": 0.203125, "empty_answer_rate": 0.0, "mean_reference_nll": 3.225259463171824, "generation_seconds_per_answer": 0.035974790718746874, "n_questions": 128}
+ground_test mismatched {"accuracy": 0.3984375, "pair_accuracy": 0.0625, "identical_answer_rate": 0.65625, "empty_answer_rate": 0.0, "mean_reference_nll": 1.8991032284025096, "generation_seconds_per_answer": 0.03441166617188429, "n_questions": 128}
+ground_test noimage {"accuracy": 0.375, "pair_accuracy": 0.0, "identical_answer_rate": 1.0, "empty_answer_rate": 0.0, "mean_reference_nll": 1.7028598453325685, "generation_seconds_per_answer": 0.025056280554672128, "n_questions": 128}
+vqa_test correct {"accuracy": 0.5812499999999999, "pair_accuracy": 0.3645833333333333, "identical_answer_rate": 0.4166666666666667, "empty_answer_rate": 0.0, "mean_reference_nll": 1.3245266248201613, "generation_seconds_per_answer": 0.0469891406406191, "n_questions": 192}
+vqa_test complementary {"accuracy": 0.22447916666666667, "pair_accuracy": 0.010416666666666666, "identical_answer_rate": 0.4166666666666667, "empty_answer_rate": 0.0, "mean_reference_nll": 2.731140331675609, "generation_seconds_per_answer": 0.04747748438020949, "n_questions": 192}
+vqa_test mismatched {"accuracy": 0.30677083333333327, "pair_accuracy": 0.0625, "identical_answer_rate": 0.625, "empty_answer_rate": 0.0, "mean_reference_nll": 2.5202046253616572, "generation_seconds_per_answer": 0.0448566432968723, "n_questions": 192}
+vqa_test noimage {"accuracy": 0.30572916666666666, "pair_accuracy": 0.0, "identical_answer_rate": 1.0, "empty_answer_rate": 0.0, "mean_reference_nll": 2.684173063879522, "generation_seconds_per_answer": 0.025084286421844126, "n_questions": 192}
+{
+ "ground_test": {
+  "correct": 0.75,
+  "complementary": 0.1328,
+  "mismatched": 0.3984,
+  "noimage": 0.375
+ },
+ "vqa_test": {
+  "correct": 0.5812,
+  "complementary": 0.2245,
+  "mismatched": 0.3068,
+  "noimage": 0.3057
+ }
+}

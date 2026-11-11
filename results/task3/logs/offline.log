@@ -1,0 +1,36 @@
+  math: 0/1000 questions
+  math: 100/1000 questions
+  math: 200/1000 questions
+  math: 300/1000 questions
+  math: 400/1000 questions
+  math: 500/1000 questions
+  math: 600/1000 questions
+  math: 700/1000 questions
+  math: 800/1000 questions
+  math: 900/1000 questions
+method  best_K  best_L  first   rwc_K      sc  shortest
+N                                                      
+1       0.6390  0.6390  0.639  0.6390  0.6390    0.6390
+2       0.6631  0.6538  0.639  0.6631  0.6390    0.6486
+4       0.6839  0.6686  0.639  0.6932  0.6880    0.6475
+8       0.6975  0.6715  0.639  0.7251  0.7141    0.6415
+16      0.7032  0.6601  0.639  0.7426  0.7274    0.6279
+32      0.7025  0.6362  0.639  0.7521  0.7341    0.6200
+  mathvista: 0/1000 questions
+  mathvista: 100/1000 questions
+  mathvista: 200/1000 questions
+  mathvista: 300/1000 questions
+  mathvista: 400/1000 questions
+  mathvista: 500/1000 questions
+  mathvista: 600/1000 questions
+  mathvista: 700/1000 questions
+  mathvista: 800/1000 questions
+  mathvista: 900/1000 questions
+method  best_K  best_L  best_V  best_Z  best_Ztok   first   rwc_K   rwc_V   rwc_Z  rwc_Ztok      sc  shortest
+N                                                                                                            
+1       0.5362  0.5362  0.5362  0.5362     0.5362  0.5362  0.5362  0.5362  0.5362    0.5362  0.5362    0.5362
+2       0.5479  0.5430  0.5434  0.5545     0.5540  0.5362  0.5479  0.5434  0.5545    0.5540  0.5362    0.5499
+4       0.5505  0.5330  0.5451  0.5628     0.5585  0.5362  0.5678  0.5648  0.5771    0.5751  0.5780    0.5514
+8       0.5480  0.5194  0.5432  0.5630     0.5572  0.5362  0.6010  0.6011  0.6086    0.6098  0.5992    0.5454
+16      0.5498  0.5050  0.5405  0.5675     0.5569  0.5362  0.6124  0.6122  0.6186    0.6188  0.6090    0.5436
+32      0.5462  0.4812  0.5375  0.5775     0.5625  0.5362  0.6250  0.6288  0.6312    0.6275  0.6180    0.5398

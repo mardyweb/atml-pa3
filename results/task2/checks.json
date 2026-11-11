@@ -1,0 +1,16 @@
+{
+ "splits": {
+  "train_dev_overlap": 0,
+  "train_test_overlap": 0,
+  "dev_test_overlap": 0,
+  "ground_pool_images_subset_of_training_images": true
+ },
+ "n_features_dim": 768,
+ "connector_grad_norm_first_update": NaN,
+ "lm_params_with_grad_stage1": 0,
+ "trainable_by_stage": {
+  "caption": 1837056,
+  "vit": 6424576,
+  "vqa": 6424576
+ }
+}

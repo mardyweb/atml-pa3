@@ -1,0 +1,74 @@
+{
+ "lm": "Qwen/Qwen3-0.6B",
+ "vision": "google/siglip-base-patch16-224",
+ "n_visual_tokens": 196,
+ "seed": 6304,
+ "stages": [
+  {
+   "name": "caption",
+   "updates": 2250,
+   "conn_lr": 0.001,
+   "lora_lr": null,
+   "mix": null
+  },
+  {
+   "name": "vit",
+   "updates": 1500,
+   "conn_lr": 0.0001,
+   "lora_lr": 2e-05,
+   "mix": {
+    "presence": 0.5,
+    "counting": 0.25,
+    "caption": 0.25
+   }
+  },
+  {
+   "name": "vqa",
+   "updates": 750,
+   "conn_lr": 5e-05,
+   "lora_lr": 1e-05,
+   "mix": {
+    "vqa": 0.7,
+    "presence": 0.1,
+    "counting": 0.1,
+    "caption": 0.1
+   }
+  }
+ ],
+ "lora": {
+  "r": 16,
+  "alpha": 32,
+  "dropout": 0.05,
+  "targets": [
+   "q_proj",
+   "k_proj",
+   "v_proj",
+   "o_proj"
+  ]
+ },
+ "micro_batch": 8,
+ "grad_accum": 2,
+ "weight_decay": 0.01,
+ "clip": 1.0,
+ "warmup_frac": 0.05,
+ "final_lr_frac": 0.1,
+ "caps": {
+  "question": 80,
+  "caption": 64,
+  "answer": 16
+ },
+ "prompts": {
+  "caption": "Describe this image in one sentence.",
+  "answer_suffix": "Answer with a single word or short phrase.",
+  "visual_span": "<|vision_start|><|image_pad|>x196<|vision_end|>"
+ },
+ "calibration": {
+  "rule": "scale = rms(text_embeddings) / rms(connector_output_at_init)",
+  "text_rms": 0.02738298662006855,
+  "connector_rms": 0.4986386299133301,
+  "scale": 0.05491549386141237,
+  "n_text_tokens": 23603,
+  "n_images": 256
+ },
+ "gpu": "Tesla T4"
+}

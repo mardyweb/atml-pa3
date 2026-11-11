@@ -1,0 +1,31 @@
+{
+ "update": 4500,
+ "stages": {
+  "caption": {
+   "trainable_params": 1837056,
+   "seconds": 3263.1326813870055,
+   "peak_mem_bytes": 1692071936,
+   "frozen_lm_params": 596049920,
+   "weights_dir": "/content/pa3_out/task2/stage1",
+   "weights_bytes": 25777072
+  },
+  "vit": {
+   "trainable_params": 6424576,
+   "seconds": 2204.6662053529863,
+   "peak_mem_bytes": 1662022656,
+   "frozen_lm_params": 596049920,
+   "weights_dir": "/content/pa3_out/task2/stage2",
+   "weights_bytes": 25777072
+  },
+  "vqa": {
+   "trainable_params": 6424576,
+   "seconds": 1103.399525220003,
+   "peak_mem_bytes": 1645712896,
+   "frozen_lm_params": 596049920,
+   "weights_dir": "/content/pa3_out/task2/stage3",
+   "weights_bytes": 25777072
+  }
+ },
+ "dev_eval_seconds": 118.05655582199893,
+ "train_seconds": 6571.198411959995
+}

@@ -782,4 +782,4 @@ idea_3 = "I could create a local food festival to showcase local cuisine and enc
 - repetition: none
 - math framing: none
 - inappropriate: no
-- notes: ideas aren't very relevant to the kind of advice that should be offered to the wife
+- notes: ideas aren't very relevant to the kind of advice that should be offered to the wife; uses first person voice for ideas

@@ -1,0 +1,30 @@
+math top-bottom quartile correctness gap (heldout): {'length': -0.0462, 'mean_logp': 0.0789, 'self_certainty': 0.1206}
+mathvista top-bottom quartile correctness gap (heldout): {'length': -0.0395, 'mean_logp': 0.0167, 'self_certainty': 0.0353, 'visual_engagement': 0.0389, 'calibrated_conf': 0.0387, 'visconf': 0.0752, 'visconf_tokenwise': 0.0736}
+confidence-vision: {
+ "per_rollout_corr": {
+  "mean": -0.20429338505084985,
+  "median": -0.20305658863207243,
+  "frac_positive": 0.1585625,
+  "n_defined": 31972
+ },
+ "per_question_mean_corr": {
+  "mean": -0.20455960780021396,
+  "ci95": [
+   -0.21532314402307212,
+   -0.19384218678135223
+  ]
+ },
+ "corr_by_correctness": {
+  "False": -0.21702595243592704,
+  "True": -0.19330854131755792
+ },
+ "cov_c_v": {
+  "mean": -0.00216508200381679,
+  "frac_positive": 0.1594375,
+  "by_correctness": {
+   "False": -0.002490101543481325,
+   "True": -0.0018841457482549724
+  }
+ },
+ "rank_agreement_Z_vs_Ztok": 0.67
+}

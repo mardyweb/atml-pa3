@@ -1,0 +1,89 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "dtype": "float16",
+ "n_questions": 50,
+ "scorer": "math-verify 0.9.0",
+ "strategies": {
+  "single": {
+   "accuracy": 0.66,
+   "accuracy_ci95": [
+    0.52,
+    0.78
+   ],
+   "mean_output_tokens": 735.5,
+   "mean_input_tokens": 108.38,
+   "total_output_tokens": 36775,
+   "mean_seconds": 31.308394884240005,
+   "total_seconds": 1565.4197442120003,
+   "truncation_rate": 0.02,
+   "extraction_rate": 0.98,
+   "allowance_used": 0.23942057291666666
+  },
+  "parallel": {
+   "accuracy": 0.56,
+   "accuracy_ci95": [
+    0.42,
+    0.7
+   ],
+   "mean_output_tokens": 1866.38,
+   "mean_input_tokens": 325.14,
+   "total_output_tokens": 93319,
+   "mean_seconds": 79.42530424774,
+   "total_seconds": 3971.2652123870002,
+   "truncation_rate": 0.15999999999999998,
+   "extraction_rate": 0.84,
+   "allowance_used": 0.6075455729166667
+  },
+  "sequential": {
+   "accuracy": 0.56,
+   "accuracy_ci95": [
+    0.42,
+    0.7
+   ],
+   "mean_output_tokens": 1183.74,
+   "mean_input_tokens": 873.34,
+   "total_output_tokens": 59187,
+   "mean_seconds": 50.51326596283997,
+   "total_seconds": 2525.6632981419984,
+   "truncation_rate": 0.07,
+   "extraction_rate": 0.93,
+   "allowance_used": 0.38533203125
+  }
+ },
+ "gpu": "NVIDIA L4",
+ "load_seconds": 32.23796483299998,
+ "peak_gpu_mem_bytes": 6453694976,
+ "parallel_oracle_any_correct": 0.68,
+ "revision_transitions": {
+  "wrong_to_correct": 2,
+  "correct_to_wrong": 0,
+  "correct_to_correct": 26,
+  "wrong_to_wrong": 22,
+  "answer_changed": 8,
+  "initial_accuracy": 0.52
+ },
+ "paired_diffs": {
+  "parallel_minus_single": {
+   "mean": -0.1,
+   "ci95": [
+    -0.22,
+    0.0
+   ]
+  },
+  "sequential_minus_single": {
+   "mean": -0.1,
+   "ci95": [
+    -0.22,
+    0.02
+   ]
+  },
+  "sequential_minus_parallel": {
+   "mean": 0.0,
+   "ci95": [
+    -0.08,
+    0.08
+   ]
+  }
+ }
+}

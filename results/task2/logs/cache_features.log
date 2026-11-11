@@ -1,0 +1,71 @@
+downloading 0 images ...
+images done in 0s, failed: 0
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights: 100%|██████████| 208/208 [00:00<00:00, 852.27it/s]
+[transformers] [1mSiglipVisionModel LOAD REPORT[0m from: google/siglip-base-patch16-224
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+logit_bias                                                   | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_model.head.weight                                       | UNEXPECTED |  | 
+text_model.head.bias                                         | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+train2014: 64/8753
+train2014: 1344/8753
+train2014: 2624/8753
+train2014: 3904/8753
+train2014: 5184/8753
+train2014: 6464/8753
+train2014: 7744/8753
+val2014: 64/528
+{
+ "vision_model": "google/siglip-base-patch16-224",
+ "hidden": 768,
+ "n_patches": 196,
+ "dtype": "float16",
+ "splits": {
+  "train2014": {
+   "n_images": 8753,
+   "bytes": 2635143168,
+   "seconds": 106.90780446500003
+  },
+  "val2014": {
+   "n_images": 528,
+   "bytes": 158957568,
+   "seconds": 5.971862737000038
+  }
+ },
+ "total_seconds": 119.73364626,
+ "peak_gpu_mem_bytes": 744759808,
+ "layernorm_check": {
+  "max_abs_diff_vs_manual_post_layernorm": 0.0,
+  "feature_shape": [
+   196,
+   768
+  ]
+ },
+ "gpu_mem_after_release_bytes": 37448704
+}

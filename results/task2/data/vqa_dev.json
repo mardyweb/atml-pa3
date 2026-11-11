@@ -1,0 +1,1474 @@
+[
+ {
+  "pair_id": "vqa_457708000_115927012",
+  "answer_type": "yes/no",
+  "q": [
+   {
+    "qid": 457708000,
+    "image_id": 457708,
+    "question": "Is this sign found in the United States?",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ],
+    "consensus": "no",
+    "target": "no",
+    "answer_type": "yes/no"
+   },
+   {
+    "qid": 115927012,
+    "image_id": 115927,
+    "question": "Is this sign found in the United States?",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ],
+    "consensus": "yes",
+    "target": "yes",
+    "answer_type": "yes/no"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_319607001_216790017",
+  "answer_type": "yes/no",
+  "q": [
+   {
+    "qid": 319607001,
+    "image_id": 319607,
+    "question": "Is this an urban setting?",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ],
+    "consensus": "yes",
+    "target": "yes",
+    "answer_type": "yes/no"
+   },
+   {
+    "qid": 216790017,
+    "image_id": 216790,
+    "question": "Is this an urban setting?",
+    "answers": [
+     "no",
+     "no",
+     "yes",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "yes",
+     "no"
+    ],
+    "consensus": "no",
+    "target": "no",
+    "answer_type": "yes/no"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_247624002_113408002",
+  "answer_type": "yes/no",
+  "q": [
+   {
+    "qid": 247624002,
+    "image_id": 247624,
+    "question": "Is it nighttime?",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "no",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ],
+    "consensus": "yes",
+    "target": "yes",
+    "answer_type": "yes/no"
+   },
+   {
+    "qid": 113408002,
+    "image_id": 113408,
+    "question": "Is it nighttime?",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "yes",
+     "yes"
+    ],
+    "consensus": "no",
+    "target": "no",
+    "answer_type": "yes/no"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_563195001_40517002",
+  "answer_type": "yes/no",
+  "q": [
+   {
+    "qid": 563195001,
+    "image_id": 563195,
+    "question": "Is this near a mountain?",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ],
+    "consensus": "yes",
+    "target": "yes",
+    "answer_type": "yes/no"
+   },
+   {
+    "qid": 40517002,
+    "image_id": 40517,
+    "question": "Is this near a mountain?",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "don't know",
+     "no",
+     "no",
+     "no",
+     "no"
+    ],
+    "consensus": "no",
+    "target": "no",
+    "answer_type": "yes/no"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_508470000_410225021",
+  "answer_type": "yes/no",
+  "q": [
+   {
+    "qid": 508470000,
+    "image_id": 508470,
+    "question": "Does the cup have a straw?",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ],
+    "consensus": "yes",
+    "target": "yes",
+    "answer_type": "yes/no"
+   },
+   {
+    "qid": 410225021,
+    "image_id": 410225,
+    "question": "Does the cup have a straw?",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ],
+    "consensus": "no",
+    "target": "no",
+    "answer_type": "yes/no"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_311922001_14961002",
+  "answer_type": "yes/no",
+  "q": [
+   {
+    "qid": 311922001,
+    "image_id": 311922,
+    "question": "Are the tie and necktie digitally added?",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ],
+    "consensus": "yes",
+    "target": "yes",
+    "answer_type": "yes/no"
+   },
+   {
+    "qid": 14961002,
+    "image_id": 14961,
+    "question": "Are the tie and necktie digitally added?",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "yes",
+     "no",
+     "yes",
+     "no",
+     "no"
+    ],
+    "consensus": "no",
+    "target": "no",
+    "answer_type": "yes/no"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_527994002_438615004",
+  "answer_type": "yes/no",
+  "q": [
+   {
+    "qid": 527994002,
+    "image_id": 527994,
+    "question": "Is there a window in this room?",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ],
+    "consensus": "yes",
+    "target": "yes",
+    "answer_type": "yes/no"
+   },
+   {
+    "qid": 438615004,
+    "image_id": 438615,
+    "question": "Is there a window in this room?",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "yes",
+     "no",
+     "no",
+     "no",
+     "no"
+    ],
+    "consensus": "no",
+    "target": "no",
+    "answer_type": "yes/no"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_350679002_558234000",
+  "answer_type": "yes/no",
+  "q": [
+   {
+    "qid": 350679002,
+    "image_id": 350679,
+    "question": "Are those typical wedding cakes?",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ],
+    "consensus": "no",
+    "target": "no",
+    "answer_type": "yes/no"
+   },
+   {
+    "qid": 558234000,
+    "image_id": 558234,
+    "question": "Are those typical wedding cakes?",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "no",
+     "yes",
+     "yes",
+     "yes"
+    ],
+    "consensus": "yes",
+    "target": "yes",
+    "answer_type": "yes/no"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_40011000_77405003",
+  "answer_type": "yes/no",
+  "q": [
+   {
+    "qid": 40011000,
+    "image_id": 40011,
+    "question": "Are there trees?",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ],
+    "consensus": "yes",
+    "target": "yes",
+    "answer_type": "yes/no"
+   },
+   {
+    "qid": 77405003,
+    "image_id": 77405,
+    "question": "Are there trees?",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ],
+    "consensus": "no",
+    "target": "no",
+    "answer_type": "yes/no"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_447378000_561517007",
+  "answer_type": "yes/no",
+  "q": [
+   {
+    "qid": 447378000,
+    "image_id": 447378,
+    "question": "Is this healthy?",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ],
+    "consensus": "yes",
+    "target": "yes",
+    "answer_type": "yes/no"
+   },
+   {
+    "qid": 561517007,
+    "image_id": 561517,
+    "question": "Is this healthy?",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ],
+    "consensus": "no",
+    "target": "no",
+    "answer_type": "yes/no"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_461588002_218476004",
+  "answer_type": "yes/no",
+  "q": [
+   {
+    "qid": 461588002,
+    "image_id": 461588,
+    "question": "Does the rider have a helmet on?",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ],
+    "consensus": "yes",
+    "target": "yes",
+    "answer_type": "yes/no"
+   },
+   {
+    "qid": 218476004,
+    "image_id": 218476,
+    "question": "Does the rider have a helmet on?",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ],
+    "consensus": "no",
+    "target": "no",
+    "answer_type": "yes/no"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_308828002_125182007",
+  "answer_type": "yes/no",
+  "q": [
+   {
+    "qid": 308828002,
+    "image_id": 308828,
+    "question": "Is there a sailing boat on each sign?",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ],
+    "consensus": "yes",
+    "target": "yes",
+    "answer_type": "yes/no"
+   },
+   {
+    "qid": 125182007,
+    "image_id": 125182,
+    "question": "Is there a sailing boat on each sign?",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ],
+    "consensus": "no",
+    "target": "no",
+    "answer_type": "yes/no"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_565153005_284688002",
+  "answer_type": "number",
+  "q": [
+   {
+    "qid": 565153005,
+    "image_id": 565153,
+    "question": "How many signs are there?",
+    "answers": [
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3"
+    ],
+    "consensus": "3",
+    "target": "3",
+    "answer_type": "number"
+   },
+   {
+    "qid": 284688002,
+    "image_id": 284688,
+    "question": "How many signs are there?",
+    "answers": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    "consensus": "1",
+    "target": "1",
+    "answer_type": "number"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_525542004_571584009",
+  "answer_type": "number",
+  "q": [
+   {
+    "qid": 525542004,
+    "image_id": 525542,
+    "question": "How many buses are shown?",
+    "answers": [
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "1"
+    ],
+    "consensus": "2",
+    "target": "2",
+    "answer_type": "number"
+   },
+   {
+    "qid": 571584009,
+    "image_id": 571584,
+    "question": "How many buses are shown?",
+    "answers": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "2",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    "consensus": "1",
+    "target": "1",
+    "answer_type": "number"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_68546000_431746001",
+  "answer_type": "number",
+  "q": [
+   {
+    "qid": 68546000,
+    "image_id": 68546,
+    "question": "How many phones are shown?",
+    "answers": [
+     "4",
+     "4",
+     "4",
+     "4",
+     "4",
+     "4",
+     "4",
+     "4",
+     "4",
+     "4"
+    ],
+    "consensus": "4",
+    "target": "4",
+    "answer_type": "number"
+   },
+   {
+    "qid": 431746001,
+    "image_id": 431746,
+    "question": "How many phones are shown?",
+    "answers": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    "consensus": "1",
+    "target": "1",
+    "answer_type": "number"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_316000000_358494002",
+  "answer_type": "number",
+  "q": [
+   {
+    "qid": 316000000,
+    "image_id": 316000,
+    "question": "How many horses are in this picture?",
+    "answers": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    "consensus": "1",
+    "target": "1",
+    "answer_type": "number"
+   },
+   {
+    "qid": 358494002,
+    "image_id": 358494,
+    "question": "How many horses are in this picture?",
+    "answers": [
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "1",
+     "3"
+    ],
+    "consensus": "3",
+    "target": "3",
+    "answer_type": "number"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_170007002_198176004",
+  "answer_type": "number",
+  "q": [
+   {
+    "qid": 170007002,
+    "image_id": 170007,
+    "question": "How many people are sitting on the bench?",
+    "answers": [
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2"
+    ],
+    "consensus": "2",
+    "target": "2",
+    "answer_type": "number"
+   },
+   {
+    "qid": 198176004,
+    "image_id": 198176,
+    "question": "How many people are sitting on the bench?",
+    "answers": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    "consensus": "1",
+    "target": "1",
+    "answer_type": "number"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_60760001_373793005",
+  "answer_type": "number",
+  "q": [
+   {
+    "qid": 60760001,
+    "image_id": 60760,
+    "question": "How many lights are on?",
+    "answers": [
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2"
+    ],
+    "consensus": "2",
+    "target": "2",
+    "answer_type": "number"
+   },
+   {
+    "qid": 373793005,
+    "image_id": 373793,
+    "question": "How many lights are on?",
+    "answers": [
+     "1",
+     "1",
+     "1",
+     "0",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    "consensus": "1",
+    "target": "1",
+    "answer_type": "number"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_489944002_256569002",
+  "answer_type": "number",
+  "q": [
+   {
+    "qid": 489944002,
+    "image_id": 489944,
+    "question": "How many frisbees are there?",
+    "answers": [
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2"
+    ],
+    "consensus": "2",
+    "target": "2",
+    "answer_type": "number"
+   },
+   {
+    "qid": 256569002,
+    "image_id": 256569,
+    "question": "How many frisbees are there?",
+    "answers": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    "consensus": "1",
+    "target": "1",
+    "answer_type": "number"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_227224006_290231000",
+  "answer_type": "number",
+  "q": [
+   {
+    "qid": 227224006,
+    "image_id": 227224,
+    "question": "What number is on this bike?",
+    "answers": [
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6"
+    ],
+    "consensus": "6",
+    "target": "6",
+    "answer_type": "number"
+   },
+   {
+    "qid": 290231000,
+    "image_id": 290231,
+    "question": "What number is on this bike?",
+    "answers": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    "consensus": "1",
+    "target": "1",
+    "answer_type": "number"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_172279002_118564038",
+  "answer_type": "other",
+  "q": [
+   {
+    "qid": 172279002,
+    "image_id": 172279,
+    "question": "What is the person riding on?",
+    "answers": [
+     "skateboard",
+     "skateboard",
+     "skateboard",
+     "skateboard",
+     "skateboard",
+     "skateboard",
+     "skateboard",
+     "skateboard",
+     "skateboard",
+     "skateboard"
+    ],
+    "consensus": "skateboard",
+    "target": "skateboard",
+    "answer_type": "other"
+   },
+   {
+    "qid": 118564038,
+    "image_id": 118564,
+    "question": "What is the person riding on?",
+    "answers": [
+     "snowboard",
+     "snowboard",
+     "skateboard",
+     "snowboard",
+     "snowboard",
+     "snowboard",
+     "snowboard",
+     "snowboard",
+     "snowboard",
+     "snowboard"
+    ],
+    "consensus": "snowboard",
+    "target": "snowboard",
+    "answer_type": "other"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_347688000_570781011",
+  "answer_type": "other",
+  "q": [
+   {
+    "qid": 347688000,
+    "image_id": 347688,
+    "question": "What game is being played here?",
+    "answers": [
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennessee",
+     "tennis"
+    ],
+    "consensus": "tennis",
+    "target": "tennis",
+    "answer_type": "other"
+   },
+   {
+    "qid": 570781011,
+    "image_id": 570781,
+    "question": "What game is being played here?",
+    "answers": [
+     "frisbee",
+     "frisbee",
+     "frisbee",
+     "frisbee",
+     "frisbee",
+     "frisbee",
+     "frisbee",
+     "frisbee",
+     "frisbee",
+     "frisbee"
+    ],
+    "consensus": "frisbee",
+    "target": "frisbee",
+    "answer_type": "other"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_303971000_467176004",
+  "answer_type": "other",
+  "q": [
+   {
+    "qid": 303971000,
+    "image_id": 303971,
+    "question": "What sport is on the TV?",
+    "answers": [
+     "bowling",
+     "bowling",
+     "bowling",
+     "bowling",
+     "bowling",
+     "bowling",
+     "bowling",
+     "bowling",
+     "balling",
+     "bowling"
+    ],
+    "consensus": "bowling",
+    "target": "bowling",
+    "answer_type": "other"
+   },
+   {
+    "qid": 467176004,
+    "image_id": 467176,
+    "question": "What sport is on the TV?",
+    "answers": [
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "wii tennis"
+    ],
+    "consensus": "tennis",
+    "target": "tennis",
+    "answer_type": "other"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_269632001_227893019",
+  "answer_type": "other",
+  "q": [
+   {
+    "qid": 269632001,
+    "image_id": 269632,
+    "question": "What color is the  bus?",
+    "answers": [
+     "color of bus is yellow",
+     "yellow",
+     "yellow",
+     "yellow",
+     "yellow",
+     "yellow",
+     "yellow",
+     "yellow",
+     "yellow",
+     "yellow"
+    ],
+    "consensus": "yellow",
+    "target": "yellow",
+    "answer_type": "other"
+   },
+   {
+    "qid": 227893019,
+    "image_id": 227893,
+    "question": "What color is the  bus?",
+    "answers": [
+     "green",
+     "green",
+     "green",
+     "green",
+     "green",
+     "green",
+     "green",
+     "green",
+     "green",
+     "green"
+    ],
+    "consensus": "green",
+    "target": "green",
+    "answer_type": "other"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_191226001_577880005",
+  "answer_type": "other",
+  "q": [
+   {
+    "qid": 191226001,
+    "image_id": 191226,
+    "question": "Is the surfer male or female?",
+    "answers": [
+     "male",
+     "male",
+     "male",
+     "male",
+     "male",
+     "male",
+     "male",
+     "male",
+     "male",
+     "male"
+    ],
+    "consensus": "male",
+    "target": "male",
+    "answer_type": "other"
+   },
+   {
+    "qid": 577880005,
+    "image_id": 577880,
+    "question": "Is the surfer male or female?",
+    "answers": [
+     "female",
+     "female",
+     "male",
+     "female",
+     "female",
+     "female",
+     "female",
+     "female",
+     "female",
+     "female"
+    ],
+    "consensus": "female",
+    "target": "female",
+    "answer_type": "other"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_33441000_383462031",
+  "answer_type": "other",
+  "q": [
+   {
+    "qid": 33441000,
+    "image_id": 33441,
+    "question": "Is the photo clear or blurry?",
+    "answers": [
+     "blurry",
+     "blurry",
+     "blurry",
+     "blurry",
+     "blurry",
+     "blurry",
+     "blurry",
+     "clear",
+     "blurry",
+     "blurry"
+    ],
+    "consensus": "blurry",
+    "target": "blurry",
+    "answer_type": "other"
+   },
+   {
+    "qid": 383462031,
+    "image_id": 383462,
+    "question": "Is the photo clear or blurry?",
+    "answers": [
+     "clear",
+     "clear",
+     "clear",
+     "clear",
+     "clear",
+     "clear",
+     "clear",
+     "clear",
+     "blurry",
+     "clear"
+    ],
+    "consensus": "clear",
+    "target": "clear",
+    "answer_type": "other"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_214363002_380706003",
+  "answer_type": "other",
+  "q": [
+   {
+    "qid": 214363002,
+    "image_id": 214363,
+    "question": "Which foot does the girl on the bike have higher?",
+    "answers": [
+     "left",
+     "left",
+     "left",
+     "left",
+     "left",
+     "left",
+     "left",
+     "left",
+     "left",
+     "left"
+    ],
+    "consensus": "left",
+    "target": "left",
+    "answer_type": "other"
+   },
+   {
+    "qid": 380706003,
+    "image_id": 380706,
+    "question": "Which foot does the girl on the bike have higher?",
+    "answers": [
+     "right",
+     "right",
+     "right",
+     "right",
+     "right",
+     "right",
+     "right",
+     "right",
+     "right",
+     "right"
+    ],
+    "consensus": "right",
+    "target": "right",
+    "answer_type": "other"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_170048001_314356002",
+  "answer_type": "other",
+  "q": [
+   {
+    "qid": 170048001,
+    "image_id": 170048,
+    "question": "Is the man throwing or catching the frisbee?",
+    "answers": [
+     "catching",
+     "catching",
+     "catching",
+     "catching",
+     "catching",
+     "catching",
+     "catching",
+     "catching",
+     "catching",
+     "catching"
+    ],
+    "consensus": "catching",
+    "target": "catching",
+    "answer_type": "other"
+   },
+   {
+    "qid": 314356002,
+    "image_id": 314356,
+    "question": "Is the man throwing or catching the frisbee?",
+    "answers": [
+     "throwing",
+     "throwing",
+     "throwing",
+     "throwing",
+     "throwing",
+     "catching",
+     "throwing",
+     "throwing",
+     "throwing",
+     "throwing"
+    ],
+    "consensus": "throwing",
+    "target": "throwing",
+    "answer_type": "other"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_47882002_52132013",
+  "answer_type": "other",
+  "q": [
+   {
+    "qid": 47882002,
+    "image_id": 47882,
+    "question": "What kind of room is this?",
+    "answers": [
+     "kitchen",
+     "kitchen",
+     "kitchen",
+     "kitchen",
+     "kitchen",
+     "kitchen",
+     "kitchen",
+     "kitchen",
+     "kitchen",
+     "kitchen"
+    ],
+    "consensus": "kitchen",
+    "target": "kitchen",
+    "answer_type": "other"
+   },
+   {
+    "qid": 52132013,
+    "image_id": 52132,
+    "question": "What kind of room is this?",
+    "answers": [
+     "living room",
+     "living",
+     "living room",
+     "living room",
+     "living room",
+     "living room",
+     "living",
+     "living room",
+     "living room",
+     "living room"
+    ],
+    "consensus": "living room",
+    "target": "living room",
+    "answer_type": "other"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_537150002_54627006",
+  "answer_type": "other",
+  "q": [
+   {
+    "qid": 537150002,
+    "image_id": 537150,
+    "question": "What is the ground covered it?",
+    "answers": [
+     "snow",
+     "snow",
+     "snow",
+     "snow",
+     "snow",
+     "snow",
+     "snow",
+     "snow",
+     "snow",
+     "snow"
+    ],
+    "consensus": "snow",
+    "target": "snow",
+    "answer_type": "other"
+   },
+   {
+    "qid": 54627006,
+    "image_id": 54627,
+    "question": "What is the ground covered it?",
+    "answers": [
+     "grass",
+     "grass",
+     "grass",
+     "grass",
+     "grass",
+     "grass",
+     "grass",
+     "grass",
+     "grass",
+     "grass"
+    ],
+    "consensus": "grass",
+    "target": "grass",
+    "answer_type": "other"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_401244016_236189000",
+  "answer_type": "other",
+  "q": [
+   {
+    "qid": 401244016,
+    "image_id": 401244,
+    "question": "What color is the frisbee?",
+    "answers": [
+     "white",
+     "white",
+     "white",
+     "white",
+     "white",
+     "white",
+     "white",
+     "white",
+     "white",
+     "white"
+    ],
+    "consensus": "white",
+    "target": "white",
+    "answer_type": "other"
+   },
+   {
+    "qid": 236189000,
+    "image_id": 236189,
+    "question": "What color is the frisbee?",
+    "answers": [
+     "red",
+     "pink",
+     "red",
+     "red",
+     "red",
+     "red",
+     "red",
+     "red",
+     "red",
+     "red"
+    ],
+    "consensus": "red",
+    "target": "red",
+    "answer_type": "other"
+   }
+  ]
+ },
+ {
+  "pair_id": "vqa_194331004_155341002",
+  "answer_type": "other",
+  "q": [
+   {
+    "qid": 194331004,
+    "image_id": 194331,
+    "question": "What color is the car?",
+    "answers": [
+     "white",
+     "white",
+     "white",
+     "white",
+     "white",
+     "white",
+     "white",
+     "white",
+     "white",
+     "white"
+    ],
+    "consensus": "white",
+    "target": "white",
+    "answer_type": "other"
+   },
+   {
+    "qid": 155341002,
+    "image_id": 155341,
+    "question": "What color is the car?",
+    "answers": [
+     "red",
+     "red",
+     "red",
+     "red",
+     "red",
+     "red",
+     "red",
+     "red",
+     "red",
+     "red"
+    ],
+    "consensus": "red",
+    "target": "red",
+    "answer_type": "other"
+   }
+  ]
+ }
+]

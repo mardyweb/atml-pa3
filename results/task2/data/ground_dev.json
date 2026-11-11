@@ -1,0 +1,410 @@
+[
+ {
+  "type": "presence",
+  "category": "train",
+  "q": [
+   {
+    "image_id": 252968,
+    "question": "Does this image contain a train?",
+    "answer": "yes"
+   },
+   {
+    "image_id": 216133,
+    "question": "Does this image contain a train?",
+    "answer": "no"
+   }
+  ],
+  "pair_id": "dev_presence_0"
+ },
+ {
+  "type": "presence",
+  "category": "cat",
+  "q": [
+   {
+    "image_id": 194120,
+    "question": "Does this image contain a cat?",
+    "answer": "yes"
+   },
+   {
+    "image_id": 479378,
+    "question": "Does this image contain a cat?",
+    "answer": "no"
+   }
+  ],
+  "pair_id": "dev_presence_1"
+ },
+ {
+  "type": "presence",
+  "category": "zebra",
+  "q": [
+   {
+    "image_id": 544975,
+    "question": "Does this image contain a zebra?",
+    "answer": "yes"
+   },
+   {
+    "image_id": 15074,
+    "question": "Does this image contain a zebra?",
+    "answer": "no"
+   }
+  ],
+  "pair_id": "dev_presence_2"
+ },
+ {
+  "type": "presence",
+  "category": "book",
+  "q": [
+   {
+    "image_id": 154241,
+    "question": "Does this image contain a book?",
+    "answer": "yes"
+   },
+   {
+    "image_id": 565903,
+    "question": "Does this image contain a book?",
+    "answer": "no"
+   }
+  ],
+  "pair_id": "dev_presence_3"
+ },
+ {
+  "type": "presence",
+  "category": "giraffe",
+  "q": [
+   {
+    "image_id": 107511,
+    "question": "Does this image contain a giraffe?",
+    "answer": "yes"
+   },
+   {
+    "image_id": 434410,
+    "question": "Does this image contain a giraffe?",
+    "answer": "no"
+   }
+  ],
+  "pair_id": "dev_presence_4"
+ },
+ {
+  "type": "presence",
+  "category": "hair drier",
+  "q": [
+   {
+    "image_id": 257169,
+    "question": "Does this image contain a hair drier?",
+    "answer": "yes"
+   },
+   {
+    "image_id": 556966,
+    "question": "Does this image contain a hair drier?",
+    "answer": "no"
+   }
+  ],
+  "pair_id": "dev_presence_5"
+ },
+ {
+  "type": "presence",
+  "category": "train",
+  "q": [
+   {
+    "image_id": 493395,
+    "question": "Does this image contain a train?",
+    "answer": "yes"
+   },
+   {
+    "image_id": 48504,
+    "question": "Does this image contain a train?",
+    "answer": "no"
+   }
+  ],
+  "pair_id": "dev_presence_6"
+ },
+ {
+  "type": "presence",
+  "category": "cake",
+  "q": [
+   {
+    "image_id": 292769,
+    "question": "Does this image contain a cake?",
+    "answer": "yes"
+   },
+   {
+    "image_id": 565670,
+    "question": "Does this image contain a cake?",
+    "answer": "no"
+   }
+  ],
+  "pair_id": "dev_presence_7"
+ },
+ {
+  "type": "presence",
+  "category": "microwave",
+  "q": [
+   {
+    "image_id": 131661,
+    "question": "Does this image contain a microwave?",
+    "answer": "yes"
+   },
+   {
+    "image_id": 42499,
+    "question": "Does this image contain a microwave?",
+    "answer": "no"
+   }
+  ],
+  "pair_id": "dev_presence_8"
+ },
+ {
+  "type": "presence",
+  "category": "cat",
+  "q": [
+   {
+    "image_id": 216428,
+    "question": "Does this image contain a cat?",
+    "answer": "yes"
+   },
+   {
+    "image_id": 127623,
+    "question": "Does this image contain a cat?",
+    "answer": "no"
+   }
+  ],
+  "pair_id": "dev_presence_9"
+ },
+ {
+  "type": "presence",
+  "category": "handbag",
+  "q": [
+   {
+    "image_id": 265635,
+    "question": "Does this image contain a handbag?",
+    "answer": "yes"
+   },
+   {
+    "image_id": 15839,
+    "question": "Does this image contain a handbag?",
+    "answer": "no"
+   }
+  ],
+  "pair_id": "dev_presence_10"
+ },
+ {
+  "type": "presence",
+  "category": "apple",
+  "q": [
+   {
+    "image_id": 119414,
+    "question": "Does this image contain an apple?",
+    "answer": "yes"
+   },
+   {
+    "image_id": 67608,
+    "question": "Does this image contain an apple?",
+    "answer": "no"
+   }
+  ],
+  "pair_id": "dev_presence_11"
+ },
+ {
+  "type": "counting",
+  "category": "dog",
+  "q": [
+   {
+    "image_id": 125405,
+    "question": "How many dogs can you see?",
+    "answer": "2"
+   },
+   {
+    "image_id": 161736,
+    "question": "How many dogs can you see?",
+    "answer": "1"
+   }
+  ],
+  "pair_id": "dev_counting_0"
+ },
+ {
+  "type": "counting",
+  "category": "hot dog",
+  "q": [
+   {
+    "image_id": 172995,
+    "question": "How many hot dogs can you see?",
+    "answer": "1"
+   },
+   {
+    "image_id": 471785,
+    "question": "How many hot dogs can you see?",
+    "answer": "4"
+   }
+  ],
+  "pair_id": "dev_counting_1"
+ },
+ {
+  "type": "counting",
+  "category": "wine glass",
+  "q": [
+   {
+    "image_id": 89062,
+    "question": "How many wine glasses can you see?",
+    "answer": "1"
+   },
+   {
+    "image_id": 58937,
+    "question": "How many wine glasses can you see?",
+    "answer": "4"
+   }
+  ],
+  "pair_id": "dev_counting_2"
+ },
+ {
+  "type": "counting",
+  "category": "bottle",
+  "q": [
+   {
+    "image_id": 296802,
+    "question": "How many bottles can you see?",
+    "answer": "1"
+   },
+   {
+    "image_id": 79754,
+    "question": "How many bottles can you see?",
+    "answer": "3"
+   }
+  ],
+  "pair_id": "dev_counting_3"
+ },
+ {
+  "type": "counting",
+  "category": "kite",
+  "q": [
+   {
+    "image_id": 579307,
+    "question": "How many kites can you see?",
+    "answer": "2"
+   },
+   {
+    "image_id": 569,
+    "question": "How many kites can you see?",
+    "answer": "4"
+   }
+  ],
+  "pair_id": "dev_counting_4"
+ },
+ {
+  "type": "counting",
+  "category": "bed",
+  "q": [
+   {
+    "image_id": 532058,
+    "question": "How many beds can you see?",
+    "answer": "1"
+   },
+   {
+    "image_id": 509379,
+    "question": "How many beds can you see?",
+    "answer": "2"
+   }
+  ],
+  "pair_id": "dev_counting_5"
+ },
+ {
+  "type": "counting",
+  "category": "scissors",
+  "q": [
+   {
+    "image_id": 217760,
+    "question": "How many scissors can you see?",
+    "answer": "4"
+   },
+   {
+    "image_id": 116226,
+    "question": "How many scissors can you see?",
+    "answer": "1"
+   }
+  ],
+  "pair_id": "dev_counting_6"
+ },
+ {
+  "type": "counting",
+  "category": "cake",
+  "q": [
+   {
+    "image_id": 478136,
+    "question": "How many cakes can you see?",
+    "answer": "4"
+   },
+   {
+    "image_id": 229286,
+    "question": "How many cakes can you see?",
+    "answer": "1"
+   }
+  ],
+  "pair_id": "dev_counting_7"
+ },
+ {
+  "type": "counting",
+  "category": "keyboard",
+  "q": [
+   {
+    "image_id": 312868,
+    "question": "How many keyboards can you see?",
+    "answer": "3"
+   },
+   {
+    "image_id": 258996,
+    "question": "How many keyboards can you see?",
+    "answer": "4"
+   }
+  ],
+  "pair_id": "dev_counting_8"
+ },
+ {
+  "type": "counting",
+  "category": "fork",
+  "q": [
+   {
+    "image_id": 454199,
+    "question": "How many forks can you see?",
+    "answer": "1"
+   },
+   {
+    "image_id": 164330,
+    "question": "How many forks can you see?",
+    "answer": "3"
+   }
+  ],
+  "pair_id": "dev_counting_9"
+ },
+ {
+  "type": "counting",
+  "category": "bus",
+  "q": [
+   {
+    "image_id": 312384,
+    "question": "How many buses can you see?",
+    "answer": "1"
+   },
+   {
+    "image_id": 291394,
+    "question": "How many buses can you see?",
+    "answer": "3"
+   }
+  ],
+  "pair_id": "dev_counting_10"
+ },
+ {
+  "type": "counting",
+  "category": "bear",
+  "q": [
+   {
+    "image_id": 307658,
+    "question": "How many bears can you see?",
+    "answer": "1"
+   },
+   {
+    "image_id": 125412,
+    "question": "How many bears can you see?",
+    "answer": "3"
+   }
+  ],
+  "pair_id": "dev_counting_11"
+ }
+]

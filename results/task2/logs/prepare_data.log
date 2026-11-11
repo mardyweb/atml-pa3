@@ -1,0 +1,48 @@
+VQA train pairs ...
+VQA val pairs ...
+captions ...
+COCO objects ...
+{
+ "captions_train": 18000,
+ "captions_dev": 96,
+ "pool_presence_pairs": 4000,
+ "pool_counting_pairs": 4000,
+ "vqa_train": {
+  "yes/no": 640,
+  "number": 256,
+  "other": 640
+ },
+ "vqa_dev": {
+  "yes/no": 12,
+  "number": 8,
+  "other": 12
+ },
+ "vqa_test": {
+  "yes/no": 36,
+  "number": 24,
+  "other": 36
+ },
+ "ground_dev": {
+  "presence": 12,
+  "counting": 12
+ },
+ "ground_test": {
+  "presence": 32,
+  "counting": 32
+ },
+ "n_train_images": 8753,
+ "n_dev_images": 208,
+ "n_test_images": 320
+}
+checks: {'train_dev_overlap': 0, 'train_test_overlap': 0, 'dev_test_overlap': 0, 'ground_pool_images_subset_of_training_images': True}
+downloading 9281 images ...
+  1000/9281 (17s)
+  2000/9281 (33s)
+  3000/9281 (49s)
+  4000/9281 (72s)
+  5000/9281 (88s)
+  6000/9281 (105s)
+  7000/9281 (121s)
+  8000/9281 (137s)
+  9000/9281 (153s)
+images done in 158s, failed: 0

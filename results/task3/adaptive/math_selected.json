@@ -1,0 +1,129 @@
+{
+ "selected": {
+  "agreement": {
+   "tau": 0.625,
+   "gamma": null,
+   "dev": {
+    "accuracy": 0.8210000000000001,
+    "mean_cost": 7088.955499999999,
+    "mean_rollouts": 9.15
+   }
+  },
+  "quality": {
+   "tau": 0.5,
+   "gamma": 0.0,
+   "dev": {
+    "accuracy": 0.8165,
+    "mean_cost": 5479.528499999999,
+    "mean_rollouts": 7.152
+   }
+  }
+ },
+ "fixed_sc": {
+  "4": {
+   "dev": {
+    "accuracy": 0.7885,
+    "mean_cost": 2281.855,
+    "mean_rollouts": 4.0,
+    "stop_distribution": {
+     "4": 1.0,
+     "8": 0.0,
+     "16": 0.0,
+     "32": 0.0
+    },
+    "n_questions": 200
+   },
+   "heldout": {
+    "accuracy": 0.688,
+    "mean_cost": 2679.6941250000004,
+    "mean_rollouts": 4.0,
+    "stop_distribution": {
+     "4": 1.0,
+     "8": 0.0,
+     "16": 0.0,
+     "32": 0.0
+    },
+    "n_questions": 800
+   }
+  },
+  "8": {
+   "dev": {
+    "accuracy": 0.815,
+    "mean_cost": 4586.611999999999,
+    "mean_rollouts": 8.0,
+    "stop_distribution": {
+     "4": 0.0,
+     "8": 1.0,
+     "16": 0.0,
+     "32": 0.0
+    },
+    "n_questions": 200
+   },
+   "heldout": {
+    "accuracy": 0.7141249999999999,
+    "mean_cost": 5344.108500000001,
+    "mean_rollouts": 8.0,
+    "stop_distribution": {
+     "4": 0.0,
+     "8": 1.0,
+     "16": 0.0,
+     "32": 0.0
+    },
+    "n_questions": 800
+   }
+  },
+  "16": {
+   "dev": {
+    "accuracy": 0.8240000000000001,
+    "mean_cost": 9163.328000000001,
+    "mean_rollouts": 16.0,
+    "stop_distribution": {
+     "4": 0.0,
+     "8": 0.0,
+     "16": 1.0,
+     "32": 0.0
+    },
+    "n_questions": 200
+   },
+   "heldout": {
+    "accuracy": 0.7273750000000001,
+    "mean_cost": 10677.74275,
+    "mean_rollouts": 16.0,
+    "stop_distribution": {
+     "4": 0.0,
+     "8": 0.0,
+     "16": 1.0,
+     "32": 0.0
+    },
+    "n_questions": 800
+   }
+  },
+  "32": {
+   "dev": {
+    "accuracy": 0.82,
+    "mean_cost": 18322.4,
+    "mean_rollouts": 32.0,
+    "stop_distribution": {
+     "4": 0.0,
+     "8": 0.0,
+     "16": 0.0,
+     "32": 1.0
+    },
+    "n_questions": 200
+   },
+   "heldout": {
+    "accuracy": 0.7341249999999999,
+    "mean_cost": 21347.0175,
+    "mean_rollouts": 32.0,
+    "stop_distribution": {
+     "4": 0.0,
+     "8": 0.0,
+     "16": 0.0,
+     "32": 1.0
+    },
+    "n_questions": 800
+   }
+  }
+ },
+ "dev_fixed32_accuracy": 0.82
+}

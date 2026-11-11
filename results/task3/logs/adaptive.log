@@ -1,0 +1,26 @@
+  math: 0/1000
+  math: 100/1000
+  math: 200/1000
+  math: 300/1000
+  math: 400/1000
+  math: 500/1000
+  math: 600/1000
+  math: 700/1000
+  math: 800/1000
+  math: 900/1000
+math selected: {"agreement": {"tau": 0.625, "gamma": null, "dev": {"accuracy": 0.8210000000000001, "mean_cost": 7088.955499999999, "mean_rollouts": 9.15}}, "quality": {"tau": 0.5, "gamma": 0.0, "dev": {"accuracy": 0.8165, "mean_cost": 5479.528499999999, "mean_rollouts": 7.152}}} 
+held-out: {"agreement": {"accuracy": 0.7326250000000001, "mean_cost": 10136.945875, "mean_rollouts": 11.8205}, "quality": {"accuracy": 0.7280000000000001, "mean_cost": 7663.055375, "mean_rollouts": 9.0075}} 
+fixed32 held-out: 0.7341249999999999 21347.0175
+  mathvista: 0/1000
+  mathvista: 100/1000
+  mathvista: 200/1000
+  mathvista: 300/1000
+  mathvista: 400/1000
+  mathvista: 500/1000
+  mathvista: 600/1000
+  mathvista: 700/1000
+  mathvista: 800/1000
+  mathvista: 900/1000
+mathvista selected: {"agreement": {"tau": 0.5, "gamma": null, "dev": {"accuracy": 0.6345000000000001, "mean_cost": 3791.9925, "mean_rollouts": 9.696}}, "quality": {"tau": 0.5, "gamma": 0.0, "dev": {"accuracy": 0.638, "mean_cost": 4185.693, "mean_rollouts": 10.937999999999999}}} 
+held-out: {"agreement": {"accuracy": 0.6131249999999999, "mean_cost": 3323.1253749999996, "mean_rollouts": 9.9295}, "quality": {"accuracy": 0.616375, "mean_cost": 3638.4408750000002, "mean_rollouts": 10.971499999999999}} 
+fixed32 held-out: 0.618 8897.7575

@@ -16,3 +16,6 @@ tqdm
 pillow
 # lm-evaluation-harness >= 0.4.13 (needed for the `enable_thinking` model arg used for GSM8K)
 lm_eval[hf]>=0.4.13
+math-verify>=0.8
+pyarrow
+scipy

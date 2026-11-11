@@ -25,10 +25,22 @@ task2/                 Task 2 – SigLIP-Qwen VLM and visual grounding
   train_vlm.py         3-stage curriculum (2,250 / 1,500 / 750 updates), seeded mixture sampler, dev evaluation, checkpoints
   eval_vlm.py          final-test suites x {correct, complementary, mismatched, no image}; scoring, pair metrics, bootstrap CIs
   analyze_vlm.py       learning curves, result / advantage / resource tables, qualitative complementary examples
+task3/                 Task 3 – test-time compute (sampling, selection, adaptive inference)
+  common3.py           constants, splits (sorted IDs permuted with default_rng(6304)), rollout orders, boxed-answer extraction
+  answers.py           answer equivalence: math-verify (MATH), MathVista metadata rules (letters for multiple choice); NO_ANSWER
+  load_data.py         join + alignment checks of the supplied tables, answer groups (no gold), correctness, scores L/K/V, caches
+  engine.py            selection rules: FirstAns, self-consistency, best-of-N, RWC, VisConf calibration per candidate set
+  offline.py           budget sweep N in {1..32} over ten saved orders; accuracy, oracle coverage, token cost, failure decomposition, bootstrap
+  signals.py           quartile associations, confidence-vision correlation, tokenwise vs trajectory fusion, illustrative trajectories
+  adaptive.py          agreement-based and quality-aware stopping; dev grid selection, frozen held-out evaluation
+  live.py              50-question MATH live run: single 3,072 vs 3x1,024 parallel vs 1,024 + 2,048 refinement (Qwen2.5-3B-Instruct FP16)
+  analyze3.py          figures, tables, qualitative examples
 notebooks/PA3_Task1_run_all.ipynb   Colab driver for Task 1: Runtime > Run all; skips finished steps, resumes interrupted runs
 notebooks/PA3_Task2_run_all.ipynb   Colab driver for Task 2 (same design)
+notebooks/PA3_Task3_run_all.ipynb   Colab driver for Task 3 (offline steps on CPU, live step on GPU)
 results/task1/         machine-readable results, logs, split/probe IDs (committed)
 results/task2/         Task 2 results; results/task2/data/ holds the selected captions, pairs, questions and IDs
+results/task3/         Task 3 results: splits, scorer versions, offline curves + bootstrap, signals, adaptive, live calls, tables, figures
 outputs/               checkpoints, exported models, raw lm-eval dumps (NOT committed)
 ```
 
@@ -82,3 +94,22 @@ The connector output is multiplied by a fixed scale chosen so its initial RMS ma
 token embeddings (rule and value in `results/task2/config.json`). The loss is the per-example mean over supervised tokens
 averaged over the effective batch; logits are only computed at supervised positions. VQA answers use a re-implementation
 of the official VQA normalisation (`common2.normalize_answer`) and the local soft-consensus accuracy from the manual.
+
+## Reproduce Task 3
+
+The supplied rollout export (`ATML-PA3-Data`: `qwen25-math/`, `qwen25vl-mathvista/`) is not committed; point `PA3_DATA3` at it.
+
+```bash
+export PA3_OUT3=/content/pa3_out/task3 PA3_DATA3=/path/to/ATML-PA3-Data
+python task3/load_data.py      # join, alignment checks, answer groups + correctness, splits.json, scorer.json
+python task3/offline.py        # Steps 1-2: budget sweep over the ten saved orders -> results/task3/offline/
+python task3/signals.py        # Step 3  -> results/task3/signals/
+python task3/adaptive.py       # Step 5  -> results/task3/adaptive/
+python task3/live.py           # Step 4  (GPU) -> results/task3/live/
+python task3/analyze3.py       # Step 6  -> results/task3/{figures,tables,qualitative}
+```
+
+Design notes (Task 3): answer groups are formed without gold answers (math-verify equivalence for MATH, metadata
+normalisation for MathVista; failed extractions form the NO_ANSWER group and stay in voting and cost accounting);
+all tie-breaks use the earliest supporting rollout in the current order, RWC uses average ranks; VisConf calibration
+is recomputed on each candidate prefix; adaptive thresholds are chosen on the 200 development questions only.

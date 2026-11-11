@@ -17,8 +17,18 @@ task1/                 Task 1 – LLM fine-tuning (Full FT, L2-SP, LoRA-4/16, OP
   diagnostics.py       rho_k, eta, R(z) on down_proj of layers 0/13/27
   qualitative.py       168 greedy responses on first_plot_questions.yaml + 42-response annotation subset
   summarize.py         tables and figures from results/
-notebooks/PA3_Task1_run_all.ipynb   Colab driver: Runtime > Run all; skips finished steps, resumes interrupted runs
+task2/                 Task 2 – SigLIP-Qwen VLM and visual grounding
+  common2.py           constants fixed by the manual, VQA answer normalisation + soft accuracy, prompts
+  prepare_data.py      COCO-2014 / VQAv2 downloads, seeded selection of captions, grounding pairs, VQAv2 pairs; split checks
+  cache_features.py    SigLIP 196x768 patch features (post-layernorm once), FP16 memmaps; encoder released afterwards
+  vlm.py               connector (768-1024-1024), visual-token insertion into the Qwen chat template, loss / NLL / generation
+  train_vlm.py         3-stage curriculum (2,250 / 1,500 / 750 updates), seeded mixture sampler, dev evaluation, checkpoints
+  eval_vlm.py          final-test suites x {correct, complementary, mismatched, no image}; scoring, pair metrics, bootstrap CIs
+  analyze_vlm.py       learning curves, result / advantage / resource tables, qualitative complementary examples
+notebooks/PA3_Task1_run_all.ipynb   Colab driver for Task 1: Runtime > Run all; skips finished steps, resumes interrupted runs
+notebooks/PA3_Task2_run_all.ipynb   Colab driver for Task 2 (same design)
 results/task1/         machine-readable results, logs, split/probe IDs (committed)
+results/task2/         Task 2 results; results/task2/data/ holds the selected captions, pairs, questions and IDs
 outputs/               checkpoints, exported models, raw lm-eval dumps (NOT committed)
 ```
 
@@ -41,6 +51,10 @@ python task1/summarize.py
 All runs use seed 6304, the same examples in the same order, the same tokenisation and the same
 evaluation prompts. `train.py --resume` continues from the latest recovery checkpoint.
 
+The SFT loss is computed in 512-position chunks under `torch.utils.checkpoint` (`sft_loss_sum` in `train.py`) so that
+the FP32 (positions x vocabulary) logits never exist for a whole 2,048-token micro-batch at once; this is needed on
+16 GB GPUs and gives the identical objective and gradients as the unchunked computation (verified on CPU).
+
 ## Attribution of reused external code
 
 * `lm-evaluation-harness` (EleutherAI) – benchmark evaluation, used as a library/CLI.
@@ -49,3 +63,22 @@ evaluation prompts. `train.py --resume` continues from the latest recovery check
 * `hellaswag_context()` in `task1/common.py` re-implements lm-eval's HellaSwag `doc_to_text`
   preprocessing so the activation-probe prompts match the benchmark prompt format.
 * `first_plot_questions.yaml` – evaluation prompts from Betley et al., *Emergent Misalignment* (MIT licence).
+
+## Reproduce Task 2
+
+```bash
+export PA3_OUT2=/content/pa3_out/task2        # images, features, checkpoints (not committed)
+python task2/prepare_data.py                   # downloads annotations + the ~9.5k images actually used; writes results/task2/data/
+python task2/cache_features.py                 # -> outputs/task2/features/*.npy, results/task2/feature_cache.json
+python task2/train_vlm.py [--resume]           # -> results/task2/{train_log.jsonl, dev_metrics.jsonl, config.json, checks.json, resources_train.json}
+python task2/eval_vlm.py                       # -> results/task2/final/{generations.json, metrics.json}
+python task2/analyze_vlm.py                    # -> results/task2/{figures, tables, qualitative}
+PA3_VISUAL_TOKENS=49 python task2/train_vlm.py # optional 2x2-pooled variant (results/task2_49tok/)
+```
+
+Design notes (Task 2): visual embeddings replace `<|image_pad|>` placeholders inside
+`<|vision_start|>...<|vision_end|>` in the user turn, before the question; no-image inputs omit the span entirely.
+The connector output is multiplied by a fixed scale chosen so its initial RMS matches the RMS of the caption-target
+token embeddings (rule and value in `results/task2/config.json`). The loss is the per-example mean over supervised tokens
+averaged over the effective batch; logits are only computed at supervised positions. VQA answers use a re-implementation
+of the official VQA normalisation (`common2.normalize_answer`) and the local soft-consensus accuracy from the manual.

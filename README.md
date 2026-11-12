@@ -1,6 +1,4 @@
-# EE-5102 / CS-6304 ATML – Programming Assignment 3
-
-Individual submission. Code, experiments, results and report are my own.
+# ATML Programming Assignment 3
 
 ## Layout
 

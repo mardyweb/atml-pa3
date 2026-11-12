@@ -24,7 +24,7 @@ Rule: the first 8 presence pairs and first 8 counting pairs of `results/task2/da
 | test_counting_0 | How many handbags can you see? | [361586](http://images.cocodataset.org/val2014/COCO_val2014_000000361586.jpg) | **4** | yes | yes | partly ambiguous as it's hard to discern if people further into the photo are wearing a handbag |
 | test_counting_1 | How many bottles can you see? | [233376](http://images.cocodataset.org/val2014/COCO_val2014_000000233376.jpg) | **3** | yes | no | |
 | test_counting_1 | How many bottles can you see? | [479067](http://images.cocodataset.org/val2014/COCO_val2014_000000479067.jpg) | **1** | yes | no | |
-| test_counting_2 | How many keyboards can you see? | [255165](http://images.cocodataset.org/val2014/COCO_val2014_000000255165.jpg) | **3** | unsure | yes | I count four keyboards, not three; the one on top of the cabinet might be missed by the model |
+| test_counting_2 | How many keyboards can you see? | [255165](http://images.cocodataset.org/val2014/COCO_val2014_000000255165.jpg) | **3** | no | yes | I count four keyboards, not three; the one on top of the cabinet might be missed by the model |
 | test_counting_2 | How many keyboards can you see? | [531784](http://images.cocodataset.org/val2014/COCO_val2014_000000531784.jpg) | **2** | unsure | yes | 1 keyboard is clearly visible, the other potential keyboard's edge is only slightly visible in the picture |
 | test_counting_3 | How many bicycles can you see? | [504091](http://images.cocodataset.org/val2014/COCO_val2014_000000504091.jpg) | **3** | unsure | yes | I count 2 bicycles clearly; can't see the third as the person is obstructing the view of the bicycles |
 | test_counting_3 | How many bicycles can you see? | [44045](http://images.cocodataset.org/val2014/COCO_val2014_000000044045.jpg) | **1** | yes | no | |
@@ -37,6 +37,6 @@ Rule: the first 8 presence pairs and first 8 counting pairs of `results/task2/da
 | test_counting_7 | How many giraffes can you see? | [261461](http://images.cocodataset.org/val2014/COCO_val2014_000000261461.jpg) | **2** | yes | yes | there might be a third giraffe lying down |
 | test_counting_7 | How many giraffes can you see? | [553081](http://images.cocodataset.org/val2014/COCO_val2014_000000553081.jpg) | **4** | yes | no | |
 
-**Summary** (fill in): presence labels checked 16 / 16, wrong 0, ambiguous 2; counting labels checked 16 / 16, wrong 0, ambiguous 7.
+**Summary** (fill in): presence labels checked 16 / 16, wrong 0, ambiguous 2; counting labels checked 16 / 16, wrong 1, unsure 2, ambiguous 7.
 
 Typical COCO issues to look for: unannotated objects (a 'no' image that actually contains the object, often small or in the background); crowd scenes or partially visible objects making counts ambiguous; category confusions (e.g. 'couch' vs 'chair', 'cup' vs 'bowl').
